@@ -1,4 +1,4 @@
-local au = require('au')
+local au = require('user.aucmds')
 
     -- disable numbers for terminal
     au({ 'TermOpen', 'TermEnter' }, {
