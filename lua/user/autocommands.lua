@@ -1,24 +1,3 @@
-local au = require('user.aucmds')
-
-    -- disable numbers for terminal
-    au({ 'TermOpen', 'TermEnter' }, {
-        '*',
-        function()
-          vim.wo.relativenumber = false
-          vim.wo.number = false
-        end,
-    })
-    -- enable numbers on active Tabs/Windows
-    au({ 'TabEnter', 'WinEnter' }, {
-        '*',
-        function()
-          vim.wo.relativenumber = true
-          vim.wo.number = true
-        end,
-    })
-  -- }
-
-
 vim.cmd [[
   augroup _general_settings
     autocmd!
