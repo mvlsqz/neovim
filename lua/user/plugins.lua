@@ -102,6 +102,8 @@ return packer.startup(function(use)
   -- orgmode
   use 'nvim-orgmode/orgmode'
 
+  -- vimux
+  use 'hkupty/nvimux'
   -- Popup
   use 'RishabhRD/popfix'
   -- Automatically set up your configuration after cloning packer.nvim
