@@ -1,3 +1,4 @@
+vim.cmd('colorscheme ayu-mirage')
 vim.cmd [[
   augroup _general_settings
     autocmd!
@@ -28,6 +29,27 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+]]
+
+vim.cmd[[
+  augroup jenkinsfile
+    autocmd!
+    autocmd FileType Jenkinsfile set filetype=jenkinsfile
+  augroup END
+]]
+
+vim.cmd[[
+  autocmd FileType java.jenkinsfile lua require'cmp'.setup.buffer {
+  \   sources = {
+  \     { name = 'jenkinsfile',
+  \       option = {
+  \         jenkins_url = 'http://jenkins:8080/'
+  \       }
+  \     },
+  \   { name = 'buffer' },
+  \   { name = 'luasnip' }
+  \   },
+  \ }
 ]]
 
 -- Autoformat

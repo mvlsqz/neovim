@@ -1,7 +1,7 @@
 require'colorizer'.setup()
 -- require'colorbuddy'.colorscheme('gloombuddy')
-require('ayu').colorscheme('light')
+require('ayu').colorscheme()
 
 require('ayu').setup({
-  mirage = false
+  mirage = true
 })
