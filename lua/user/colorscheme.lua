@@ -3,5 +3,5 @@ require'colorizer'.setup()
 require('ayu').colorscheme()
 
 require('ayu').setup({
-  mirage = true
+  mirage = false
 })
