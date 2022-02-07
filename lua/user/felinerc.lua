@@ -1,7 +1,3 @@
--- local present, feline = pcall(require, "feline")
--- if not present then
---   return
--- end
 local theme_colors = require("ayu.colors")
 theme_colors.generate()
 
@@ -110,8 +106,8 @@ local comps = {
                 -- file_readonly_icon = '  ',
                 -- file_readonly_icon = '  ',
                 -- file_modified_icon = '',
-                file_modified_icon = '',
-                -- file_modified_icon = 'ﱐ',
+                -- file_modified_icon = '',
+                file_modified_icon = 'ﱐ',
                 -- file_modified_icon = '',
                 -- file_modified_icon = '',
                 -- file_modified_icon = '',
