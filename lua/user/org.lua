@@ -16,6 +16,7 @@ require('orgmode').setup({
     global = {
       org_agenda = 'gA',
       org_capture = 'gC',
+      org_refile = 'gOr'
     }
   }
 })
