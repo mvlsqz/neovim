@@ -102,6 +102,8 @@ return packer.startup(function(use)
 
   -- orgmode
   use 'nvim-orgmode/orgmode'
+  use 'akinsho/org-bullets.nvim'
+  use 'lukas-reineke/headlines.nvim'
 
   -- jenkins
   use 'joshzcold/cmp-jenkinsfile'
