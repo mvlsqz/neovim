@@ -100,10 +100,10 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- orgmode
-  use 'nvim-orgmode/orgmode'
-  use 'akinsho/org-bullets.nvim'
-  use 'lukas-reineke/headlines.nvim'
+  -- neorg
+  use 'nvim-neorg/neorg'
+  use 'esquires/neorg-gtd-project-tags'
+  use 'nvim-neorg/neorg-telescope'
 
   -- jenkins
   use 'joshzcold/cmp-jenkinsfile'

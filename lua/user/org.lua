@@ -1,68 +1,31 @@
-require('orgmode').setup_ts_grammar()
-
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    disable = {'org'},
-    additional_vim_regex_highlighting = {'org'},
-  },
-  ensure_installed = {'org'},
-}
-
-require('orgmode').setup({
-  org_agenda_files = {'~/Documents/agenda/agenda.org'},
-  org_default_notes_file = '~/Documents/agenda/refile.org',
-  mappings = {
-    global = {
-      org_agenda = 'gA',
-      org_capture = 'gC',
+require('neorg').setup{
+  load = {
+    ["core.norg.concealer"] = {},
+    ["core.defaults"] = {},
+    ['core.integrations.telescope'] = {},
+    ['core.norg.completion'] = {
+      config = {
+        engine = 'nvim-cmp',
+      }
+    },
+    ['core.gtd.ui'] = {},
+    ['external.gtd-project-tags'] = {},
+    ['core.gtd.base'] = {
+      config = {
+        workspace = 'work',
+        inbox = 'inbox.norg'
+      }
+    },
+    ['core.norg.dirman'] = {
+      config = {
+        workspaces = {
+          work = "~/Documents/work",
+          home = "~/Documents/home"
+        },
+        autochdir = true,
+        index = 'index.norg',
+        last_workspace = vim.fn.stdpath("cache") .. "/neorg_last_workspace.txt"
+      }
     }
   }
-})
-
-require("org-bullets").setup {
-  symbols = { "◉", "○", "✸", "✿" }
-}
-
-require("headlines").setup {
-    markdown = {
-        source_pattern_start = "^```",
-        source_pattern_end = "^```$",
-        dash_pattern = "^---+$",
-        headline_pattern = "^#+",
-        headline_highlights = { "Headline" },
-        codeblock_highlight = "CodeBlock",
-        dash_highlight = "Dash",
-        fat_headlines = true,
-    },
-    rmd = {
-        source_pattern_start = "^```",
-        source_pattern_end = "^```$",
-        dash_pattern = "^---+$",
-        headline_pattern = "^#+",
-        headline_signs = { "Headline" },
-        codeblock_sign = "CodeBlock",
-        dash_highlight = "Dash",
-        fat_headlines = true,
-    },
-    vimwiki = {
-        source_pattern_start = "^{{{%a+",
-        source_pattern_end = "^}}}$",
-        dash_pattern = "^---+$",
-        headline_pattern = "^=+",
-        headline_highlights = { "Headline" },
-        codeblock_highlight = "CodeBlock",
-        dash_highlight = "Dash",
-        fat_headlines = true,
-    },
-    org = {
-        source_pattern_start = "#%+[bB][eE][gG][iI][nN]_[sS][rR][cC]",
-        source_pattern_end = "#%+[eE][nN][dD]_[sS][rR][cC]",
-        dash_pattern = "^-----+$",
-        headline_pattern = "^%*+",
-        headline_highlights = { "Headline" },
-        codeblock_highlight = "CodeBlock",
-        dash_highlight = "Dash",
-        fat_headlines = true,
-    },
 }
