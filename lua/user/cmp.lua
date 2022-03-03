@@ -103,6 +103,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
+        neorg = "[Neorg]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]

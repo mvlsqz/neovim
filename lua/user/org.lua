@@ -3,6 +3,12 @@ require('neorg').setup{
     ["core.norg.concealer"] = {},
     ["core.defaults"] = {},
     ['core.integrations.telescope'] = {},
+    ['core.norg.journal'] = {
+      config = {
+        workspace = 'work',
+        journal_folder = 'notes',
+      }
+    },
     ['core.norg.completion'] = {
       config = {
         engine = 'nvim-cmp',
