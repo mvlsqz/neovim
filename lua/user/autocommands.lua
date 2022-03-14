@@ -1,4 +1,4 @@
--- vim.cmd('colorscheme ayu-dark')
+vim.cmd('colorscheme ayu-dark')
 vim.cmd [[
   augroup _general_settings
     autocmd!
