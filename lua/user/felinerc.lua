@@ -1,13 +1,10 @@
-local theme_colors = require("ayu.colors")
-theme_colors.generate()
-
 if not pcall(require, "feline") then
   return
 end
 
 local colors = {
-    bg = theme_colors.panel_bg,
-    fg = theme_colors.fg,
+    bg = '#292a44',
+    fg = '#d7dae0',
     yellow = '#e0af68',
     cyan = '#56b6c2',
     darkblue = '#081633',

@@ -28,10 +28,10 @@ configs.setup {
     enable = true,
   },
   highlight = {
-    enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
-    use_languagetree = true,
+     enable = true, -- false will disable the whole extension
+     disable = { "" }, -- list of language that will be disabled
+     additional_vim_regex_highlighting = true,
+     use_languagetree = true,
   },
   indent = { enable = true, disable = { "yaml" } },
   context_commentstring = {
