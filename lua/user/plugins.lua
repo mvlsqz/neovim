@@ -67,6 +67,7 @@ return packer.startup(function(use)
   use 'bkegley/gloombuddy'
   use 'norcalli/nvim-colorizer.lua'
   use 'Shatur/neovim-ayu'
+  use 'xiyaowong/nvim-transparent'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -109,6 +110,8 @@ return packer.startup(function(use)
   use 'joshzcold/cmp-jenkinsfile'
   -- Popup
   use 'RishabhRD/popfix'
+  use 'hoschi/yode-nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
