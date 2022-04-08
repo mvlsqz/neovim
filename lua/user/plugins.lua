@@ -68,6 +68,7 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'Shatur/neovim-ayu'
   use 'xiyaowong/nvim-transparent'
+  use 'Mofiqul/adwaita.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
