@@ -33,7 +33,7 @@ local options = { -- Nvim options
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  guifont = "Hasklug Nerd Font:h18",               -- the font used in graphical neovim applications
   foldmethod = 'expr',
   foldexpr = "nvim_treesitter#foldexpr()",
 }
@@ -47,4 +47,9 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-vim.g.adwaita_mode = "dark"
+vim.cmd [[let &t_ut='']]
+vim.cmd [[let g:neovide_cursor_vfx_mode='railgun']]
+vim.cmd [[let g:neovide_transparency=0.92]]
+vim.cmd [[let g:python3_host_prog='/usr/local/Caskroom/miniconda/base/bin/python']]
+vim.cmd [[let g:node_host_prog='/usr/local/bin/neovim-node-host']]
+-- vim.g.adwaita_mode = "dark"

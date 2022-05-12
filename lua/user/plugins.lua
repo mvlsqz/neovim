@@ -69,6 +69,7 @@ return packer.startup(function(use)
   use 'Shatur/neovim-ayu'
   use 'xiyaowong/nvim-transparent'
   use 'Mofiqul/adwaita.nvim'
+  use 'EdenEast/nightfox.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

@@ -1,4 +1,3 @@
-vim.cmd('colorscheme adwaita')
 vim.cmd [[
   augroup _general_settings
     autocmd!
