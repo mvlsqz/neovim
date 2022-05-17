@@ -50,6 +50,3 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[let &t_ut='']]
 vim.cmd [[let g:neovide_cursor_vfx_mode='wireframe']]
 vim.cmd [[let g:neovide_transparency=0.92]]
-vim.cmd [[let g:python3_host_prog='/usr/local/Caskroom/miniconda/base/bin/python']]
-vim.cmd [[let g:node_host_prog='/usr/local/bin/neovim-node-host']]
--- vim.g.adwaita_mode = "dark"
