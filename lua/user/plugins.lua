@@ -65,9 +65,9 @@ return packer.startup(function(use)
   -- use "lunarvim/darkplus.nvim"
   -- use 'tjdevries/colorbuddy.vim'
   -- use 'bkegley/gloombuddy'
-  -- use 'norcalli/nvim-colorizer.lua'
+  use 'norcalli/nvim-colorizer.lua'
   -- use 'Shatur/neovim-ayu'
-  -- use 'xiyaowong/nvim-transparent'
+  use 'xiyaowong/nvim-transparent'
   use 'Mofiqul/adwaita.nvim'
   use 'EdenEast/nightfox.nvim'
   use ({
