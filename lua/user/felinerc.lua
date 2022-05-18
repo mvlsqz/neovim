@@ -305,7 +305,7 @@ table.insert(components.active[3], comps.vi_mode.right)
 -- require'feline'.setup {}
 require'feline'.setup {
     colors = { bg = colors.bg, fg = colors.fg },
-    components = components,
+    components = require('catppuccin.core.integrations.feline'),
     vi_mode_colors = vi_mode_colors,
     force_inactive = {
         filetypes = {
