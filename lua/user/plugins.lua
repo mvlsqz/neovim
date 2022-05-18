@@ -62,12 +62,12 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use 'tjdevries/colorbuddy.vim'
-  use 'bkegley/gloombuddy'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'Shatur/neovim-ayu'
-  use 'xiyaowong/nvim-transparent'
+  -- use "lunarvim/darkplus.nvim"
+  -- use 'tjdevries/colorbuddy.vim'
+  -- use 'bkegley/gloombuddy'
+  -- use 'norcalli/nvim-colorizer.lua'
+  -- use 'Shatur/neovim-ayu'
+  -- use 'xiyaowong/nvim-transparent'
   use 'Mofiqul/adwaita.nvim'
   use 'EdenEast/nightfox.nvim'
   use ({
