@@ -49,4 +49,4 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[let &t_ut='']]
 vim.cmd [[let g:neovide_cursor_vfx_mode='wireframe']]
-vim.cmd [[let g:neovide_transparency=0.92]]
+vim.cmd [[let g:neovide_transparency=0.97]]
