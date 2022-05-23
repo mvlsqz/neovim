@@ -14,4 +14,5 @@
 --   exclude = {}, -- table: groups you don't want to clear
 -- })
 
-require('yode-nvim').setup({})
+
+-- require('yode-nvim').setup({})

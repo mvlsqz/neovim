@@ -110,7 +110,6 @@ return packer.startup(function(use)
   use 'joshzcold/cmp-jenkinsfile'
   -- Popup
   use 'RishabhRD/popfix'
-  use 'hoschi/yode-nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
