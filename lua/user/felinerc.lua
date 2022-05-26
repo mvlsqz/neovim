@@ -303,9 +303,14 @@ table.insert(components.active[3], comps.vi_mode.right)
 }) ]]
 
 -- require'feline'.setup {}
+local status_ok, cmpnts = pcall(require, "catppuccin.core.integrations.feline")
+if not status_ok then
+  cmpnts = components
+end
+
 require'feline'.setup {
     colors = { bg = colors.bg, fg = colors.fg },
-    components = require('catppuccin.core.integrations.feline'),
+    components = cmpnts, -- require('catppuccin.core.integrations.feline'),
     vi_mode_colors = vi_mode_colors,
     force_inactive = {
         filetypes = {
