@@ -102,5 +102,5 @@ local settings = {
 local catppuccin = require('catppuccin')
 
 catppuccin.setup(settings)
-
+vim.g.catppuccin_flavour = "frappe"
 vim.cmd("colorscheme catppuccin")
