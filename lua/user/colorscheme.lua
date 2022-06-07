@@ -35,7 +35,7 @@ require'colorizer'.setup()
 --
 -- vim.cmd("colorscheme dawnfox")
 
-local settings = {
+  local settings = {
   transparent_background = false,
   term_colors = true,
   styles = {
@@ -102,5 +102,5 @@ local settings = {
 local catppuccin = require('catppuccin')
 
 catppuccin.setup(settings)
-vim.g.catppuccin_flavour = "frappe"
+vim.g.catppuccin_flavour = "mocha"
 vim.cmd("colorscheme catppuccin")
