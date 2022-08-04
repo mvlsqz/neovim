@@ -6,7 +6,7 @@ M.todo = {
     icon = "",
   },
   uncertain = {
-    icon = "?",
+    icon = "",
   },
   urgent = {
     icon = "",
@@ -15,7 +15,7 @@ M.todo = {
     icon = "",
   },
   cancelled = {
-    icon = "",
+    icon = "",
   },
 }
 
@@ -47,7 +47,7 @@ M.list = {
 
 M.heading = {
   level_1 = {
-    icon = "",
+    icon = "",
   },
 
   level_2 = {
@@ -55,20 +55,20 @@ M.heading = {
   },
 
   level_3 = {
-    icon = "  ",
+    icon = "  ",
   },
 
   level_4 = {
     enabled = true,
-    icon = "   ﰟ",
+    icon = "   ",
   },
 
   level_5 = {
-    icon = "    ▶",
+    icon = "    ",
   },
 
   level_6 = {
-    icon = "     ⤷",
+    icon = "     ",
   },
 }
 
