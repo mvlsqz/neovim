@@ -2,9 +2,6 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 return {
-  -- Insert --
-  -- jj to go to normal
-  keymap("i", "jk", "<ESC>", opts),
   -- Visual --
   -- stay in indent mode
   keymap("v", "<", "<gv", opts),
@@ -22,8 +19,8 @@ return {
   keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts),
   keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts),
 
-  -- Terminal --
-  -- Terminal navigation
+  -- -- Terminal --
+  -- -- Terminal navigation
   keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts),
   keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts),
   keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts),
@@ -33,6 +30,6 @@ return {
     n = {
       ["<leader>wq"] = { "<cmd>qa <CR>", "Quit Nvim" },
       ["<leader>gg"] = { "<cmd>LazyGit<CR>", "Lazygit" },
-    }
+    },
   },
 }
