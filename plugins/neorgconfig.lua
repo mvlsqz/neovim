@@ -1,6 +1,6 @@
-local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 local present, neorg = pcall(require, "neorg")
-local icons = require("custom.plugins.icons")
+local icons = require "custom.plugins.icons"
 
 if not present then
   return
@@ -10,37 +10,42 @@ parser_configs.norg_meta = {
   install_info = {
     url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
     files = { "src/parser.c" },
-    branch = "main"
-  }
+    branch = "main",
+  },
 }
 
 parser_configs.norg_table = {
   install_info = {
-      url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
-      files = { "src/parser.c" },
-      branch = "main"
+    url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
+    files = { "src/parser.c" },
+    branch = "main",
   },
 }
 
-require('nvim-treesitter.configs').setup{
-  ensure_installed = {"norg_meta", "norg_table"},
+require("nvim-treesitter.configs").setup {
+  ensure_installed = { "norg_meta", "norg_table" },
   highlight = {
-      enable = true,
+    enable = true,
   },
 }
 
 local options = {
   load = {
     ["core.defaults"] = {},
-    ["core.export"] = {},
+    ["core.export"] = {
+      config = {
+        directory = "~/Documents/",
+        filetype = "markdown",
+      },
+    },
     ["core.tangle"] = {},
     ["core.gtd.ui"] = {},
     ["core.gtd.helpers"] = {},
     ["core.gtd.queries"] = {},
     ["core.gtd.base"] = {
       config = {
-        workspace = "work"
-      }
+        workspace = "work",
+      },
     },
     ["core.norg.concealer"] = {
       config = {
@@ -48,8 +53,8 @@ local options = {
           todo = icons.todo,
           list = icons.list,
           heading = icons.heading,
-        }
-      }
+        },
+      },
     },
     ["core.norg.qol.toc"] = {},
     ["core.export.markdown"] = {},
@@ -57,11 +62,11 @@ local options = {
       config = {
         workspaces = {
           work = "~/Documents/work",
-          home = "~/Documents/home"
-        }
-      }
-    }
-  }
+          home = "~/Documents/home",
+        },
+      },
+    },
+  },
 }
 
 neorg.setup(options)

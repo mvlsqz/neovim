@@ -1,28 +1,26 @@
-return function ()
-  local ok, lspconfig = pcall(require, "lspconfig")
-  local configs_ok, configs = pcall(require, "plugins.configs.lspconfig")
+vim.lsp.set_log_level "debug"
+local lspconfig = require "lspconfig"
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
-  if not ok then
-    return
-  end
+local servers = {
+  "jedi_language_server",
+  "terraform_lsp",
+  "terraformls",
+  "gopls",
+  -- "haskell-language-server",
+}
 
-  if not configs_ok then
-   return
-  end
-
-  local servers ={
-    "jedi_language_server",
-    "terraformls",
-    "gopls",
-    -- "haskell-language-server",
-  }
-  local on_attach = configs.on_attach
-  local capabilities = configs.capabilities
-
-  for _, server in ipairs(servers) do
-   lspconfig[server].setup {
-     on_attach = on_attach,
-     capabilities = capabilities,
-   }
+for _, server in ipairs(servers) do
+  if server == "terraform_lsp" or server == "terraformls" then
+    lspconfig[server].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  else
+    lspconfig[server].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
   end
 end
