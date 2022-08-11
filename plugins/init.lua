@@ -31,6 +31,9 @@ return {
     disable = false,
     command = "Alpha",
   },
+  ["folke/which-key.nvim"] = {
+    disable = false,
+  },
   ["nvim-neorg/neorg"] = {
     after = "nvim-treesitter",
     setup = function()
@@ -42,5 +45,16 @@ return {
       require "custom.plugins.neorgconfig"
     end,
     requires = "nvim-lua/plenary.nvim",
+  },
+  ["max397574/better-escape.nvim"] = {
+    event = "InsertEnter",
+    config = function()
+      require("better_escape").setup {
+        mapping = { "jk", "jj" },
+        timeout = 1000,
+        clear_empty_lines = true,
+        keys = "<Esc>",
+      }
+    end,
   },
 }
