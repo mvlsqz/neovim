@@ -23,6 +23,12 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+  ["hrsh7th/nvim-cmp"] = {
+    after = "friendly-snippets",
+    config = function()
+      require "custom.plugins.cmp"
+    end,
+  },
   ["rodjek/vim-puppet"] = {
     opt = true,
     ft = "puppet",
