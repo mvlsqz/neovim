@@ -1,4 +1,3 @@
-local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 local present, neorg = pcall(require, "neorg")
 local icons = require "custom.plugins.icons"
 
@@ -16,6 +15,11 @@ require("nvim-treesitter.configs").setup {
 local options = {
   load = {
     ["core.defaults"] = {},
+    ["core.norg.completion"] = {
+      config = {
+        engine = "nvim-cmp",
+      },
+    },
     ["core.export"] = {
       config = {
         directory = "~/Documents/",
@@ -23,6 +27,8 @@ local options = {
       },
     },
     ["core.tangle"] = {},
+    ["external.kanban"] = {},
+    ["external.gtd-project-tags"] = {},
     ["core.gtd.ui"] = {},
     ["core.gtd.helpers"] = {},
     ["core.gtd.queries"] = {},

@@ -40,11 +40,17 @@ return {
       require("core.lazy_load").on_file_open "neorg"
       require("core.lazy_load").on_file_open "plenary.nvim"
       require("core.lazy_load").on_file_open "nvim-treesitter"
+      require("core.lazy_load").on_file_open "neorg-kanban"
+      require("core.lazy_load").on_file_open "neorg-gtd-project-tags"
     end,
     config = function()
       require "custom.plugins.neorgconfig"
     end,
-    requires = "nvim-lua/plenary.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "max397574/neorg-kanban",
+      "esquires/neorg-gtd-project-tags",
+    },
   },
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",
