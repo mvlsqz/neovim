@@ -32,6 +32,7 @@ M.mason = {
     "pylint",
     "flake8",
     "gopls",
+    "tflint",
     -- "haskell-language-server",
   },
 }
