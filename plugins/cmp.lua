@@ -6,7 +6,7 @@ end
 local M = {}
 require("base46").load_highlight "cmp"
 
-vim.opt.completeopt = "menuone,noselect"
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 local function border(hl_name)
   return {
@@ -94,10 +94,9 @@ M.options = {
     { name = "buffer" },
     { name = "nvim_lua" },
     { name = "path" },
-    { name = "copilot" },
     { name = "cmdline" },
     { name = "treesitter" },
-    { name = "plugins" },
+    { name = "neorg" },
   },
   experimental = { ghost_text = true },
 }

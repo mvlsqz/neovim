@@ -29,12 +29,12 @@ o.signcolumn = "yes" -- always show the sign columnotherwise it would shift the 
 o.wrap = true -- display lines as one long line
 o.scrolloff = 8 -- is one of my fav
 o.sidescrolloff = 8
-o.guifont = "Hasklug Nerd Font:h16" -- the font used in graphical neovim applications
+o.guifont = "Hasklug Nerd Font:h12" -- the font used in graphical neovim applications
 o.foldmethod = "expr"
 o.relativenumber = true -- set relative numbered lines
 
 g.neovide_cursor_vfx_mode = "wireframe"
-g.neovide_transparency = 0.96
+g.neovide_transparency = 0.94
 
 local api = vim.api
 local autocmd = api.nvim_create_autocmd
