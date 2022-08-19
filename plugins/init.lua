@@ -62,7 +62,7 @@ return {
     event = "InsertEnter",
     config = function()
       require("better_escape").setup {
-        mapping = { "jk", "jj" },
+        mapping = { "jk", "jj", "JJ", "JK" },
         timeout = 1000,
         clear_empty_lines = true,
         keys = "<Esc>",
