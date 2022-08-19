@@ -8,6 +8,7 @@ local servers = {
   "jedi_language_server",
   "terraformls",
   "gopls",
+  "ansiblels",
   -- "haskell-language-server",
 }
 

@@ -12,6 +12,7 @@ M.treesitter = {
     "lua",
     "python",
     "hcl",
+    "yaml",
     -- "norg",
     "bash",
     "markdown",
@@ -24,6 +25,7 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    "ansible-language-server",
     "lua-language-server",
     "stylua",
     "luacheck",
