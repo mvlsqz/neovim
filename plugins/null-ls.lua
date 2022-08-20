@@ -1,4 +1,5 @@
 local ok, null_ls = pcall(require, "null-ls")
+require "custom.plugins.null-ls-codeactions"
 
 if ok then
   local async_formatting = function(bufnr)
