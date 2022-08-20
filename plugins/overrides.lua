@@ -17,6 +17,7 @@ M.treesitter = {
     "bash",
     "markdown",
     "ruby",
+    "latex",
   },
   highlight = {
     enable = true,
@@ -35,6 +36,7 @@ M.mason = {
     "stylua",
     "terraform-ls",
     "tflint",
+    "texlab",
     -- "haskell-language-server",
   },
 }

@@ -9,12 +9,47 @@ local servers = {
   "terraformls",
   "gopls",
   "ansiblels",
+  "texlab",
   -- "haskell-language-server",
 }
 
 for _, server in ipairs(servers) do
-  lspconfig[server].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  if server == "texlab" then
+    lspconfig[server].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      filetypes = { "tex", "latex", "cls", "bib" },
+      settings = {
+        texlab = {
+          auxDirectory = ".",
+          bibtexFormatter = "texlab",
+          build = {
+            args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+            executable = "latexmk",
+            forwardSearchAfter = true,
+            onSave = true,
+          },
+          chktex = {
+            onEdit = false,
+            onOpenAndSave = false,
+          },
+          diagnosticsDelay = 300,
+          formatterLineLength = 80,
+          forwardSearch = {
+            executable = "zathura",
+            args = { "--synctex-forward", "%l:1:%f", "%p" },
+          },
+          latexFormatter = "latexindent",
+          latexindent = {
+            modifyLineBreaks = false,
+          },
+        },
+      },
+    }
+  else
+    lspconfig[server].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  end
 end
