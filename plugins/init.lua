@@ -13,6 +13,7 @@ return {
     config = function()
       require "custom.plugins.null-ls"
     end,
+    lock = true,
   },
   ["neovim/nvim-lspconfig"] = {
     setup = function()
