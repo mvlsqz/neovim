@@ -1,5 +1,5 @@
 local ok, null_ls = pcall(require, "null-ls")
-require "custom.plugins.null-ls-codeactions"
+local ruby_code_actions = require "custom.plugins.codeactions.ruby"
 
 if ok then
   local async_formatting = function(bufnr)
@@ -32,10 +32,6 @@ if ok then
       end
     )
   end
-  local conditional = function(fn)
-    local utils = require("null-ls.utils").make_conditional_utils()
-    return fn(utils)
-  end
 
   local builtins = null_ls.builtins
 
@@ -44,18 +40,6 @@ if ok then
     builtins.formatting.stylua,
     builtins.formatting.terraform_fmt,
     builtins.formatting.puppet_lint,
-    conditional(function(utils)
-      return utils.root_has_file "Gemfile"
-          and null_ls.builtins.formatting.rubocop.with {
-            filetype = "ruby",
-            command = "bundle",
-            args = vim.list_extend(
-              { "exec", "rubocop" },
-              { "-f", "quiet", "-a", "-o", "/dev/null", "--stdin", "$FILENAME" }
-            ),
-          }
-        or null_ls.builtins.formatting.rubocop
-    end),
     builtins.diagnostics.rubocop.with {
       args = {
         "-f",
@@ -76,6 +60,8 @@ if ok then
     -- Code actions
     builtins.code_actions.refactoring,
     builtins.hover.dictionary,
+    ruby_code_actions.autocorrect_with_rubocop,
+    ruby_code_actions.insert_frozen_string_literal,
   }
 
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
