@@ -18,7 +18,7 @@ for _, server in ipairs(servers) do
     lspconfig[server].setup {
       on_attach = on_attach,
       capabilities = capabilities,
-      filetypes = { "tex", "latex", "cls", "bib" },
+      filetypes = { "tex", "bib" },
       settings = {
         texlab = {
           auxDirectory = ".",
