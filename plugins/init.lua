@@ -1,4 +1,9 @@
 return {
+  ["ellisonleao/glow.nvim"] = {
+    config = function()
+      require("glow").setup()
+    end,
+  },
   ["kdheepak/lazygit.nvim"] = {
     after = "telescope.nvim",
     setup = function()

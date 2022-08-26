@@ -1,6 +1,7 @@
 local o = vim.opt
 local g = vim.g
 o.backup = false -- creates a backup file
+o.shell = 'fish'
 o.cmdheight = 1 -- more space in the neovim command line for displaying messages
 o.conceallevel = 0 -- so that `` is visible in markdown files
 o.fileencoding = "utf-8" -- the encoding written to a file
