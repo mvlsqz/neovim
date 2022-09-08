@@ -63,6 +63,7 @@ return {
       "max397574/neorg-kanban",
       "esquires/neorg-gtd-project-tags",
     },
+    tag = '0.0.12',
   },
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",

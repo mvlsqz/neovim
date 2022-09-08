@@ -6,7 +6,7 @@ if not present then
 end
 
 require("nvim-treesitter.configs").setup {
-  ensure_installed = { "norg_meta", "norg_table" },
+  ensure_installed = {"norg"},
   highlight = {
     enable = true,
   },
