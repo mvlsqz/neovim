@@ -10,7 +10,7 @@ local servers = {
   "gopls",
   "ansiblels",
   "texlab",
-  -- "haskell-language-server",
+  "hls",
 }
 
 for _, server in ipairs(servers) do
