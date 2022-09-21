@@ -1,4 +1,15 @@
 return {
+  ["nvim-telescope/telescope-file-browser.nvim"] = {
+    after = "telescope.nvim",
+    config = function()
+      require("telescope").setup {
+        extensions = {
+          file_browser = {},
+        },
+      }
+      require("telescope").load_extension "file_browser"
+    end,
+  },
   ["ellisonleao/glow.nvim"] = {
     config = function()
       require("glow").setup()
@@ -63,7 +74,7 @@ return {
       "max397574/neorg-kanban",
       "esquires/neorg-gtd-project-tags",
     },
-    tag = '0.0.12',
+    tag = "0.0.12",
   },
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",

@@ -30,6 +30,7 @@ return {
     n = {
       ["<leader>wq"] = { "<cmd>qa <CR>", "Quit Nvim" },
       ["<leader>gg"] = { "<cmd>LazyGit<CR>", "Lazygit" },
+      ["<leader>fe"] = { "<cmd>Telescope file_browser<CR>", "File Browser" },
     },
   },
 }
