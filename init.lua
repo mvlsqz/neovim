@@ -1,7 +1,7 @@
 local o = vim.opt
 local g = vim.g
 o.backup = false -- creates a backup file
-o.shell = 'fish'
+o.shell = "fish"
 o.cmdheight = 1 -- more space in the neovim command line for displaying messages
 o.conceallevel = 0 -- so that `` is visible in markdown files
 o.fileencoding = "utf-8" -- the encoding written to a file
@@ -30,11 +30,14 @@ o.signcolumn = "yes" -- always show the sign columnotherwise it would shift the 
 o.wrap = true -- display lines as one long line
 o.scrolloff = 8 -- is one of my fav
 o.sidescrolloff = 8
-o.guifont = "Hasklug Nerd Font:h12" -- the font used in graphical neovim applications
 o.foldmethod = "expr"
 o.relativenumber = true -- set relative numbered lines
 
-g.neovide_cursor_vfx_mode = "wireframe"
+o.guifont = "Iosevka Nerd Font:h16" -- the font used in graphical neovim applications
+g.neovide_scale_factor = 2
+g.neovide_cursor_vfx_mode = "torpedo"
+g.neovide_cursor_vfx_opacity = 200.0
+g.neovide_cursor_vfx_particle_lifetime = 1.2
 g.neovide_transparency = 0.94
 
 local api = vim.api

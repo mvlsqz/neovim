@@ -76,12 +76,14 @@ return {
     config = function()
       require "custom.plugins.neorgconfig"
     end,
+    cmd = "Neorg",
     requires = {
       "nvim-lua/plenary.nvim",
       "max397574/neorg-kanban",
       "esquires/neorg-gtd-project-tags",
+      "Pocco81/TrueZen.nvim",
     },
-    tag = "0.0.12",
+    -- tag = "0.0.12",
   },
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",

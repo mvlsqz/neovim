@@ -6,7 +6,7 @@ if not present then
 end
 
 require("nvim-treesitter.configs").setup {
-  ensure_installed = {"norg"},
+  ensure_installed = { "norg" },
   highlight = {
     enable = true,
   },
@@ -15,6 +15,11 @@ require("nvim-treesitter.configs").setup {
 local options = {
   load = {
     ["core.defaults"] = {},
+    ["core.presenter"] = {
+      config = {
+        zen_mode = "truezen",
+      },
+    },
     ["core.norg.completion"] = {
       config = {
         engine = "nvim-cmp",
