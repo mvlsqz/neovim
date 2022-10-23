@@ -19,6 +19,10 @@ return {
   keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts),
   keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts),
 
+  -- Font manipulation
+  -- keymap({"i", "n"}, "<A-->", "<cmd>lua ResizeGuiFont(-1)"),
+  -- keymap({"i", "n"}, "<A-=>", "<cmd>lua ResizeGuiFont(1)"),
+
   -- -- Terminal --
   -- -- Terminal navigation
   keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts),
@@ -30,7 +34,10 @@ return {
     n = {
       ["<leader>wq"] = { "<cmd>qa <CR>", "Quit Nvim" },
       ["<leader>gg"] = { "<cmd>LazyGit<CR>", "Lazygit" },
-      ["<leader>fe"] = { "<cmd>Telescope file_browser<CR>", "File Browser" },
+      ["<leader>fe"] = { "<cmd>Telescope file_browser<CR>", "File browser" },
+      ["<leader>tf"] = { "<cmd>Neorg tangle current-file<CR>", "Tangle current file" },
+      ["<leader>z="] = { "<cmd>lua ResizeGuiFont(2)<CR>", "Increase font size" },
+      ["<leader>z-"] = { "<cmd>lua ResizeGuiFont(-2)<CR>", "Reduce font size" },
     },
   },
 }

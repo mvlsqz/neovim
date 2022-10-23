@@ -1,5 +1,4 @@
 local o = vim.opt
-local g = vim.g
 o.backup = false -- creates a backup file
 o.shell = "fish"
 o.cmdheight = 1 -- more space in the neovim command line for displaying messages
@@ -32,13 +31,6 @@ o.scrolloff = 8 -- is one of my fav
 o.sidescrolloff = 8
 o.foldmethod = "expr"
 o.relativenumber = true -- set relative numbered lines
-
-o.guifont = "Iosevka Nerd Font:h16" -- the font used in graphical neovim applications
-g.neovide_scale_factor = 2
-g.neovide_cursor_vfx_mode = "torpedo"
-g.neovide_cursor_vfx_opacity = 200.0
-g.neovide_cursor_vfx_particle_lifetime = 1.2
-g.neovide_transparency = 0.94
 
 local api = vim.api
 local autocmd = api.nvim_create_autocmd
