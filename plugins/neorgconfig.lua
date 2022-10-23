@@ -16,9 +16,7 @@ local options = {
   load = {
     ["core.defaults"] = {},
     ["core.presenter"] = {
-      config = {
-        zen_mode = "truezen",
-      },
+      config = { zen_mode = "truezen" },
     },
     ["core.norg.completion"] = {
       config = {

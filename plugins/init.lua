@@ -69,6 +69,7 @@ return {
     setup = function()
       require("core.lazy_load").on_file_open "neorg"
       require("core.lazy_load").on_file_open "plenary.nvim"
+      require("core.lazy_load").on_file_open "TrueZen.nvim"
       require("core.lazy_load").on_file_open "nvim-treesitter"
       require("core.lazy_load").on_file_open "neorg-kanban"
       require("core.lazy_load").on_file_open "neorg-gtd-project-tags"
@@ -81,9 +82,13 @@ return {
       "nvim-lua/plenary.nvim",
       "max397574/neorg-kanban",
       "esquires/neorg-gtd-project-tags",
-      "Pocco81/TrueZen.nvim",
+      {
+        "Pocco81/TrueZen.nvim",
+        config = function()
+          require("true-zen").setup {}
+        end,
+      },
     },
-    -- tag = "0.0.12",
   },
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",
