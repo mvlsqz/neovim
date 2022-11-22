@@ -42,7 +42,13 @@ local options = {
     },
     ["core.norg.concealer"] = {
       config = {
+        markup_preset = "concealer",
+        icons_preset = "diamond",
         icons = {
+          marker = {
+            enabled = true,
+            icon = " ",
+          },
           todo = icons.todo,
           list = icons.list,
           heading = icons.heading,

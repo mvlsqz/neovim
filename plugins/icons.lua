@@ -47,28 +47,24 @@ M.list = {
 
 M.heading = {
   level_1 = {
-    icon = "",
+    icon = "◈",
   },
 
   level_2 = {
-    icon = " ",
+    icon = " ◇",
   },
 
   level_3 = {
-    icon = "  ",
+    icon = "  ◆",
   },
-
   level_4 = {
-    enabled = true,
-    icon = "   ",
+    icon = "   ❖",
   },
-
   level_5 = {
-    icon = "    ",
+    icon = "    ⟡",
   },
-
   level_6 = {
-    icon = "     ",
+    icon = "     ⋄",
   },
 }
 

@@ -1,11 +1,10 @@
 local M = {}
 require "custom.neovide"
+require "custom.highlights"
 local overrides = require "custom.plugins.overrides"
 
 M.ui = {
-  theme = "catppuccin",
-  hl_add = require("custom.highlights").new_hlgroups,
-  hl_override = require("custom.highlights").new_overriden_hlgroups,
+  theme = "ayu-dark",
   theme_toggle = { "catppuccin", "ayu-dark" },
 }
 

@@ -4,7 +4,7 @@ end
 local g = vim.g
 local o = vim.opt
 
-g.neovide_fullscreen = true
+-- g.neovide_fullscreen = true
 g.neovide_remember_window_size = true
 g.neovide_hide_mouse_when_typing = true
 g.neovide_no_idle = false
@@ -18,11 +18,11 @@ g.neovide_scale_factor = 4
 g.neovide_cursor_vfx_mode = "torpedo"
 g.neovide_cursor_vfx_opacity = 200.0
 g.neovide_cursor_vfx_particle_lifetime = 1.2
-g.neovide_transparency = 0.94
+g.neovide_transparency = 0.96
 
-g.gui_font_default_size = 14
+g.gui_font_default_size = 4
 g.gui_font_size = vim.g.gui_font_default_size
-g.gui_font_face = "SauceCodePro Nerd Font Mono"
+g.gui_font_face = "Iosevka"
 
 RefreshGuiFont = function()
   o.guifont = string.format("%s:h%s", g.gui_font_face, g.gui_font_size)
