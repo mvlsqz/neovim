@@ -16,6 +16,7 @@ M.plugins = {
     ["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
     ["nvim-treesitter/nvim-treesitter"] = overrides.treesitter,
     ["williamboman/mason.nvim"] = overrides.mason,
+    ["NvChad/ui"] = overrides.chadui,
   },
 }
 

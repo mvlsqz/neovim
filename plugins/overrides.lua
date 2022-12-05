@@ -13,7 +13,7 @@ M.treesitter = {
     "python",
     "hcl",
     "yaml",
-    -- "norg",
+    "norg",
     "bash",
     "markdown",
     "ruby",
@@ -21,6 +21,12 @@ M.treesitter = {
   },
   highlight = {
     enable = true,
+  },
+}
+
+M.chadui = {
+  statusline = {
+    separator_style = "round",
   },
 }
 
