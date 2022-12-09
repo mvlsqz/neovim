@@ -33,6 +33,8 @@ return {
   vim = {
     n = {
       ["<leader>wq"] = { "<cmd>qa <CR>", "Quit Nvim" },
+      ["<leader>cf"] = { "<cmd>TroubleToggle <CR>", "Toggle Trouble" },
+      ["<leader>cr"] = { "<cmd>TroubleRefresh <CR>", "Refresh Trouble" },
       ["<leader>gg"] = { "<cmd>LazyGit<CR>", "Lazygit" },
       ["<leader>fe"] = { "<cmd>Telescope file_browser<CR>", "File browser" },
       ["<leader>tf"] = { "<cmd>Neorg tangle current-file<CR>", "Tangle current file" },

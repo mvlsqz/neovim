@@ -1,4 +1,9 @@
 return {
+  ["folke/trouble.nvim"] = {
+    config = function()
+      require("trouble").setup {}
+    end,
+  },
   ["xiyaowong/nvim-transparent"] = {
     config = function()
       require("transparent").setup {
