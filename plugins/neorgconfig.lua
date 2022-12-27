@@ -30,16 +30,6 @@ local options = {
       },
     },
     ["core.tangle"] = {},
-    ["external.kanban"] = {},
-    ["external.gtd-project-tags"] = {},
-    ["core.gtd.ui"] = {},
-    ["core.gtd.helpers"] = {},
-    ["core.gtd.queries"] = {},
-    ["core.gtd.base"] = {
-      config = {
-        workspace = "work",
-      },
-    },
     ["core.norg.concealer"] = {
       config = {
         markup_preset = "concealer",

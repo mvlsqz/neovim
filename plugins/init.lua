@@ -76,8 +76,6 @@ return {
       require("core.lazy_load").on_file_open "plenary.nvim"
       require("core.lazy_load").on_file_open "TrueZen.nvim"
       require("core.lazy_load").on_file_open "nvim-treesitter"
-      require("core.lazy_load").on_file_open "neorg-kanban"
-      require("core.lazy_load").on_file_open "neorg-gtd-project-tags"
     end,
     config = function()
       require "custom.plugins.neorgconfig"
@@ -85,8 +83,6 @@ return {
     cmd = "Neorg",
     requires = {
       "nvim-lua/plenary.nvim",
-      "max397574/neorg-kanban",
-      "esquires/neorg-gtd-project-tags",
       {
         "Pocco81/TrueZen.nvim",
         config = function()
