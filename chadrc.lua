@@ -4,8 +4,8 @@ require "custom.highlights"
 local overrides = require "custom.plugins.overrides"
 
 M.ui = {
-  theme = "ayu-dark",
-  theme_toggle = { "catppuccin", "ayu-dark" },
+  theme = "rosepine",
+  theme_toggle = { "catppuccin", "rosepine" },
 }
 
 M.mappings = require "custom.plugins.keymaps"
