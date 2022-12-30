@@ -1,4 +1,9 @@
 return {
+  ["ggandor/leap.nvim"] = {
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+  },
   ["folke/trouble.nvim"] = {
     config = function()
       require("trouble").setup {}

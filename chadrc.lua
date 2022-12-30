@@ -1,6 +1,6 @@
 local M = {}
 require "custom.neovide"
-require "custom.highlights"
+-- require "custom.highlights"
 local overrides = require "custom.plugins.overrides"
 
 M.ui = {
