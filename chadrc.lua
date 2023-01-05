@@ -4,7 +4,7 @@ require "custom.neovide"
 local overrides = require "custom.plugins.overrides"
 
 M.ui = {
-  theme = "rosepine",
+  theme = "tokyonight",
   theme_toggle = { "catppuccin", "rosepine" },
 }
 

@@ -9,6 +9,7 @@ M.nvimtree = {
 
 M.treesitter = {
   ensure_installed = {
+    "help",
     "lua",
     "python",
     "hcl",
