@@ -55,7 +55,7 @@ if ok then
       },
     },
     builtins.diagnostics.flake8,
-    builtins.diagnostics.pylint,
+    -- builtins.diagnostics.pylint,
     builtins.diagnostics.puppet_lint,
     -- Code actions
     builtins.code_actions.refactoring,

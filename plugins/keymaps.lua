@@ -2,6 +2,9 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 return {
+  -- Insert --
+  keymap("i", "<F1>", "<Esc>", opts),
+  keymap("n", "<F1>", "<Esc>", opts),
   -- Visual --
   -- stay in indent mode
   keymap("v", "<", "<gv", opts),

@@ -36,7 +36,7 @@ M.mason = {
     "ansible-language-server",
     "flake8",
     "gopls",
-    "jedi-language-server",
+    "pyright",
     "lua-language-server",
     "luacheck",
     "pylint",

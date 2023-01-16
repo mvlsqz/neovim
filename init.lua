@@ -43,6 +43,8 @@ autocmd("FileType", {
     vim.opt_local.foldlevel = 10
     vim.opt_local.foldenable = false
     vim.opt_local.signcolumn = "yes:2"
+    vim.opt_local.relativenumber = false
+    vim.opt_local.number = false
   end,
 })
 

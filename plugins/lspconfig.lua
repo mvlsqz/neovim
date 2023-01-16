@@ -5,7 +5,7 @@ local default_capabilities = require("plugins.configs.lspconfig").capabilities
 local capabilities = require("cmp_nvim_lsp").default_capabilities(default_capabilities)
 
 local servers = {
-  "jedi_language_server",
+  "pyright",
   "terraformls",
   "gopls",
   "ansiblels",
