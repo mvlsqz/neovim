@@ -27,7 +27,7 @@ M.treesitter = {
 
 M.chadui = {
   statusline = {
-    separator_style = "default",
+    separator_style = "round",
   },
 }
 
