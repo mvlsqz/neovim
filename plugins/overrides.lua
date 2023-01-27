@@ -27,7 +27,7 @@ M.treesitter = {
 
 M.chadui = {
   statusline = {
-    separator_style = "round",
+    separator_style = "default",
   },
 }
 
@@ -44,7 +44,6 @@ M.mason = {
     "terraform-ls",
     "tflint",
     "texlab",
-    -- "haskell-language-server",
   },
 }
 
