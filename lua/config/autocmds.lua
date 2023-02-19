@@ -31,3 +31,18 @@ autocmd("TermOpen", {
     vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
   end,
 })
+
+autocmd("FileType", {
+  pattern = "norg",
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.cole = 1
+    vim.opt_local.foldlevel = 10
+    vim.opt_local.foldenable = false
+    vim.opt_local.signcolumn = "yes:2"
+    vim.opt_local.relativenumber = false
+    vim.opt_local.number = false
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+  end,
+})

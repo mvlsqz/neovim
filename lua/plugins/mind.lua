@@ -17,7 +17,11 @@ return {
       require("neorg").setup({
         load = {
           ["core.defaults"] = {},
-          ["core.norg.concealer"] = {},
+          ["core.norg.concealer"] = {
+            config = {
+              icon_preset = "diamond",
+            },
+          },
           ["core.norg.completion"] = {
             config = {
               engine = "nvim-cmp",
