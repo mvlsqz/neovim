@@ -8,6 +8,10 @@ return {
         data_extension = ".norg",
         data_header = "* %s",
       },
+      persistence = {
+        data_dir = "~/Documents/home/",
+        state_path = "~/Documents/home/notes.json",
+      },
     })
   end,
   dependencies = {
