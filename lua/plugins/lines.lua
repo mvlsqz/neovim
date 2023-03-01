@@ -30,7 +30,7 @@ return {
 
       require("lualine").setup({
         options = {
-          theme = "auto",
+          theme = "monokai-pro",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha" } },
           component_separators = "|",
