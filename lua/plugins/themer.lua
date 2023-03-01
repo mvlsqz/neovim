@@ -1,20 +1,7 @@
 return {
   {
-    "themercorp/themer.lua",
-    opts = {},
-    config = function()
-      require("themer").setup({
-        dim_inactive = true,
-        term_colors = true,
-        styles = {
-          comment = { style = "italic" },
-        },
-      })
-    end,
-  },
-  {
     "loctvl842/monokai-pro.nvim",
-    config = function(_, opts)
+    config = function(_, _)
       local monokai = require("monokai-pro")
 
       monokai.setup({
@@ -25,10 +12,10 @@ return {
         filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
         day_night = {
           enable = false,
-          day_filter = "classic",
+          day_filter = "pro",
           night_filter = "octagon",
         },
-        inc_search = "background", -- underline | background
+        inc_search = "underline", -- underline | background
         background_clear = {},
         plugins = {
           bufferline = {
