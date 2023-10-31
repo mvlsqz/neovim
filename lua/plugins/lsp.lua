@@ -97,6 +97,12 @@ return {
         require("lazyvim.plugins.lsp.keymaps").on_attach(client, buffer)
       end)
 
+      Util.lsp.on_attach(function(client, buffer)
+        if client.server_capabilities["documentSymbolProvider"] then
+          require("nvim-navic").attach(client, buffer)
+        end
+      end)
+
       local register_capability = vim.lsp.handlers["client/registerCapability"]
 
       vim.lsp.handlers["client/registerCapability"] = function(err, res, ctx)

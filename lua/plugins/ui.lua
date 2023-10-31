@@ -53,58 +53,6 @@ return {
     end,
   },
 
-  -- This is what powers LazyVim's fancy-looking
-  -- tabs, which include filetype icons and close buttons.
-  {
-    "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    keys = {
-      { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
-      { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
-      { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete other buffers" },
-      { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete buffers to the right" },
-      { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete buffers to the left" },
-      { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
-      { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
-      { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
-      { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
-    },
-    opts = {
-      options = {
-        -- stylua: ignore
-        close_command = function(n) require("mini.bufremove").delete(n, false) end,
-        -- stylua: ignore
-        right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
-        diagnostics = "nvim_lsp",
-        always_show_bufferline = false,
-        diagnostics_indicator = function(_, _, diag)
-          local icons = require("lazyvim.config").icons.diagnostics
-          local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-            .. (diag.warning and icons.Warn .. diag.warning or "")
-          return vim.trim(ret)
-        end,
-        offsets = {
-          {
-            filetype = "neo-tree",
-            text = "Neo-tree",
-            highlight = "Directory",
-            text_align = "left",
-          },
-        },
-      },
-    },
-    config = function(_, opts)
-      require("bufferline").setup(opts)
-      -- Fix bufferline when restoring a session
-      vim.api.nvim_create_autocmd("BufAdd", {
-        callback = function()
-          vim.schedule(function()
-            pcall(nvim_bufferline)
-          end)
-        end,
-      })
-    end,
-  },
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "LazyFile",
@@ -299,43 +247,43 @@ return {
 
       ins_left({
         function()
-          return "▊"
+          return ""
         end,
-        color = { fg = theme_colors.teal }, -- Sets highlighting of component
-        padding = { left = 0, right = 1 }, -- We don't need space before this
+        color = { fg = theme_colors.bg, bg = theme_colors.bg_popup },
+        padding = { left = 0, right = 0 }, -- We don't need space before this
       })
-
+      local mode_color = {
+        n = { mode_id = "", color = colors.teal },
+        i = { mode_id = "", color = colors.red },
+        v = { mode_id = "", color = colors.blue },
+        [""] = { mode_id = "^", color = colors.blue },
+        V = { mode_id = "", color = colors.blue },
+        c = { mode_id = "c", color = colors.magenta },
+        no = { mode_id = "no", color = colors.red },
+        s = { mode_id = "s", color = colors.orange },
+        S = { mode_id = "S", color = colors.orange },
+        [""] = { mode_id = '[""]', color = colors.orange },
+        ic = { mode_id = "ic", color = colors.yellow },
+        R = { mode_id = "R", color = colors.violet },
+        Rv = { mode_id = "Rv", color = colors.violet },
+        cv = { mode_id = "cv", color = colors.red },
+        ce = { mode_id = "ce", color = colors.red },
+        r = { mode_id = "r", color = colors.cyan },
+        rm = { mode_id = "rm", color = colors.cyan },
+        ["r?"] = { mode_id = '["r?"]', color = colors.cyan },
+        ["!"] = { mode_id = '["!"]', color = colors.red },
+        t = { mode_id = "t", color = colors.red },
+      }
       ins_left({
         -- mode component
         -- "filetype",
         function()
-          return "🌑"
+          return mode_color[vim.fn.mode()].mode_id
         end,
         color = function()
           -- auto change color according to neovims mode
-          local mode_color = {
-            n = colors.teal,
-            i = colors.red,
-            v = colors.blue,
-            [""] = colors.blue,
-            V = colors.blue,
-            c = colors.magenta,
-            no = colors.red,
-            s = colors.orange,
-            S = colors.orange,
-            [""] = colors.orange,
-            ic = colors.yellow,
-            R = colors.violet,
-            Rv = colors.violet,
-            cv = colors.red,
-            ce = colors.red,
-            r = colors.cyan,
-            rm = colors.cyan,
-            ["r?"] = colors.cyan,
-            ["!"] = colors.red,
-            t = colors.red,
-          }
-          return { fg = mode_color[vim.fn.mode()], gui = "bold" }
+
+          return { fg = mode_color[vim.fn.mode()].color, gui = "bold" }
         end,
         padding = { right = 0 },
       })
@@ -379,20 +327,19 @@ return {
         -- Lsp server name .
         function()
           local msg = "No Active Lsp"
-          local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-          local clients = vim.lsp.get_active_clients()
+          local clients = vim.lsp.get_clients({ bufnr = 0 })
+          local lsp_clients = {}
           if next(clients) == nil then
             return msg
           end
+
           for _, client in ipairs(clients) do
-            local filetypes = client.config.filetypes
-            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-              return client.name
-            end
+            table.insert(lsp_clients, client.name)
           end
+          msg = table.concat(lsp_clients, " 󰇝 ")
           return msg
         end,
-        icon = " ",
+        -- icon = " ",
         color = { fg = colors.yellow, gui = "bold" },
       })
 
@@ -413,7 +360,7 @@ return {
 
       ins_right({
         "branch",
-        icon = "",
+        icon = "",
         color = { fg = colors.violet, gui = "bold" },
       })
       local git_symbols = require("lazyvim.config").icons.git
@@ -430,10 +377,10 @@ return {
 
       ins_right({
         function()
-          return "▊"
+          return ""
         end,
-        color = { fg = theme_colors.teal },
-        padding = { left = 1 },
+        color = { fg = theme_colors.bg, bg = theme_colors.bg_float },
+        padding = { left = 0 },
       })
 
       lualine.setup(config)

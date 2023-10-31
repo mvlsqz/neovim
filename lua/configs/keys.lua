@@ -19,4 +19,31 @@ K.treesitter = {
   { "<bs>", desc = "Decrement selection", mode = "x" },
 }
 
+K.barbecue = {
+  {
+    "]b",
+    function()
+      vim.cmd("bnext")
+    end,
+    desc = "Jump to next buffer",
+  },
+  {
+    "[b",
+    function()
+      vim.cmd("bprevious")
+    end,
+    desc = "Jump to previous buffer",
+  },
+}
+
+K.toggleterm = {
+  {
+    "<leader>h",
+    function()
+      vim.cmd("ToggleTerm")
+    end,
+    desc = "Toggle float terminal",
+  },
+}
+
 return K
