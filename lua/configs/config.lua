@@ -51,6 +51,15 @@ C.tstextobjects = function()
   end
 end
 
-C.lualine = function() end
+C.betterscape = function()
+  require("better_escape").setup({
+    mapping = { "jk", "jj", "JJ", "JK" },
+  })
+end
+
+C.marks = function()
+  local marks = require("marks")
+  marks.setup({})
+end
 
 return C

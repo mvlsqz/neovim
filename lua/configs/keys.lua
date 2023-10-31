@@ -46,4 +46,17 @@ K.toggleterm = {
   },
 }
 
+K.marks = function()
+  local marks = require("marks")
+  return {
+    {
+      "<leader>ma",
+      function()
+        marks.annotate()
+      end,
+      desc = "Add mark annotation",
+    },
+  }
+end
+
 return K

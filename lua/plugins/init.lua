@@ -58,6 +58,15 @@ Plugins = {
     "stevearc/conform.nvim",
     opts = options.conform,
   },
+  { -- Scape from insert mode
+    "max397574/better-escape.nvim",
+    config = configs.betterscape,
+  },
+  { -- Mark manipulation
+    "chentoast/marks.nvim",
+    config = configs.marks,
+    keys = keys.marks,
+  },
 }
 
 return Plugins
