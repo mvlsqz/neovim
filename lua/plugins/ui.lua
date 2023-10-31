@@ -166,6 +166,7 @@ return {
   { "MunifTanjim/nui.nvim", lazy = true },
   {
     "nvim-lualine/lualine.nvim",
+    event = { "LazyFile" },
     config = function()
       local theme_colors = require("tokyonight.colors").setup()
       local lualine = require("lualine")
