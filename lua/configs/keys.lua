@@ -59,4 +59,28 @@ K.marks = function()
   }
 end
 
+K.mind = {
+  {
+    "gmm",
+    function()
+      vim.cmd("MindOpenMain")
+    end,
+    desc = "Open Mind Main Notes",
+  },
+  {
+    "gmc",
+    function()
+      vim.cmd("MindClose")
+    end,
+    desc = "Close Mind Main Notes",
+  },
+  {
+    "gmr",
+    function()
+      vim.cmd("Neorg return")
+    end,
+    desc = "Close Notes",
+  },
+}
+
 return K

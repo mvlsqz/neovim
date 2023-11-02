@@ -62,4 +62,44 @@ C.marks = function()
   marks.setup({})
 end
 
+C.mind = function()
+  require("mind").setup({
+    persistence = {
+      state_path = "~/Documents/notes/mind.json",
+      data_dir = "~/Documents/notes/mind",
+    },
+    edit = {
+      data_extension = ".norg",
+      data_header = "* %s",
+    },
+    tree = {
+      automatic_creation = true,
+    },
+    ui = {
+      width = 30,
+      root_marker = "󱗼 ",
+      data_marker = "󱘫 ",
+      url_marker = "󰖟 ",
+      icon_preset = {
+        { " ", "Sub-project" },
+        { " ", "Journal, newspaper, weekly and daily news" },
+        { "󱩎 ", "For when you have an idea" },
+        { " ", "Note taking?" },
+        { " ", "Task management" },
+        { " ", "Done" },
+        { "󰦖 ", "In Progress" },
+        { "󱙔 ", "Investigation" },
+        { " ", "Uncheck, empty square or backlog" },
+        { " ", "Full square or on-going" },
+        { " ", "Check or done" },
+        { " ", "Trash bin, deleted, cancelled, etc." },
+        { " ", "GitHub" },
+        { "󱑞 ", "Monitoring" },
+        { "󰛍 ", "Internet, Earth, everyone!" },
+        { " ", "Frozen, on-hold" },
+      },
+    },
+  })
+end
+
 return C

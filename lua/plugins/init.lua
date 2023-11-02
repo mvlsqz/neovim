@@ -32,7 +32,7 @@ Plugins = {
   { -- Syntax Parser
     "nvim-treesitter/nvim-treesitter",
     event = { "LazyFile", "VeryLazy" },
-    cmd = { "VimEnter", "TSUpdateSync", "TSUpdate", "TSInstall" },
+    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
 
     init = function(plugin)
       require("lazy.core.loader").add_to_rtp(plugin)
