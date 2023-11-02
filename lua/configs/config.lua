@@ -66,11 +66,12 @@ C.mind = function()
   require("mind").setup({
     persistence = {
       state_path = "~/Documents/notes/mind.json",
-      data_dir = "~/Documents/notes/mind",
+      data_dir = "~/Documents/notes/",
     },
     edit = {
       data_extension = ".norg",
       data_header = "* %s",
+      copy_link_format = "{:%s:}[]",
     },
     tree = {
       automatic_creation = true,
