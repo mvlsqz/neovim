@@ -19,12 +19,14 @@ return {
           function()
             kiwi.open_wiki_index()
           end,
+          desc = "View wiki notes",
         },
         {
           "<leader>vt",
           function()
             kiwi.todo.toggle()
           end,
+          desc = "Toggle todo",
         },
       }
     end,
