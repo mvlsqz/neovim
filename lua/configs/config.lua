@@ -63,10 +63,11 @@ C.marks = function()
 end
 
 C.mind = function()
+  local home = os.getenv("HOME")
   require("mind").setup({
     persistence = {
-      state_path = "~/Documents/notes/mind.json",
-      data_dir = "~/Documents/notes/",
+      state_path = home .. "/Documents/notes/mind.json",
+      data_dir = home .. "/Documents/notes/",
     },
     edit = {
       data_extension = ".norg",
