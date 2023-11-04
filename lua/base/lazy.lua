@@ -13,7 +13,6 @@ require("lazy").setup({
     { import = "plugins" },
     { import = "lazyvim.plugins.util" },
     { import = "lazyvim.plugins.editor" },
-    { import = "lazyvim.plugins.coding" },
     { import = "lazyvim.plugins.formatting" },
     { import = "lazyvim.plugins.linting" },
     { import = "lazyvim.plugins.extras.lang.python" },

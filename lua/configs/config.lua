@@ -62,46 +62,6 @@ C.marks = function()
   marks.setup({})
 end
 
-C.mind = function()
-  local home = os.getenv("HOME")
-  require("mind").setup({
-    persistence = {
-      state_path = home .. "/Documents/notes/mind.json",
-      data_dir = home .. "/Documents/notes/",
-    },
-    edit = {
-      data_extension = ".norg",
-      data_header = "* %s",
-      copy_link_format = "{:%s:}[]",
-    },
-    tree = {
-      automatic_creation = true,
-    },
-    ui = {
-      width = 30,
-      root_marker = "󱗼 ",
-      data_marker = "󱘫 ",
-      url_marker = "󰖟 ",
-      icon_preset = {
-        { " ", "Sub-project" },
-        { " ", "Journal, newspaper, weekly and daily news" },
-        { "󱩎 ", "For when you have an idea" },
-        { " ", "Note taking?" },
-        { " ", "Task management" },
-        { " ", "Done" },
-        { "󰦖 ", "In Progress" },
-        { "󱙔 ", "Investigation" },
-        { " ", "Uncheck, empty square or backlog" },
-        { " ", "Full square or on-going" },
-        { " ", "Check or done" },
-        { " ", "Trash bin, deleted, cancelled, etc." },
-        { " ", "GitHub" },
-        { "󱑞 ", "Monitoring" },
-        { "󰛍 ", "Internet, Earth, everyone!" },
-        { " ", "Frozen, on-hold" },
-      },
-    },
-  })
-end
+C.kiwi = function() end
 
 return C

@@ -1,4 +1,5 @@
 require("lazyvim.config").init()
+require("configs.keymaps")
 
 -- Load configs module
 local m = require("configs")
