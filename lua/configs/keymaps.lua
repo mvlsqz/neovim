@@ -15,4 +15,6 @@ keymap("t", "<C-k>", function()
   vim.cmd("wincmd k")
 end, { desc = "Focus window on the left" })
 
+keymap("t", "jj", [[<C-\><C-n>]], { desc = "Leave insert mode in terminal" })
+
 keymap("x", "<leader>p", '"_dP', { desc = "Better text paste" })
