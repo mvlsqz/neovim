@@ -72,7 +72,7 @@ O.treesitter = {
 
 O.toggleterm = {
   open_mapping = [[<leader>h]],
-  direction = "float",
+  direction = "horizontal",
   shade_filetypes = {},
   hide_numbers = true,
   insert_mappings = true,

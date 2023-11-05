@@ -123,6 +123,24 @@ K.neorg = {
     end,
     desc = "Open Neorg table of contents",
   },
+  {
+    "gog",
+    function()
+      local Terminal = require("toggleterm.terminal").Terminaltoggle
+      local lazygit = Terminal:new({
+        cmd = "lazygit",
+        dir = os.getenv("HOME") .. "/Documents/notes",
+        direction = "float",
+        float_opts = {
+          boder = "double",
+        },
+        on_close = function()
+          vim.cmd("startinsert!")
+        end,
+      })
+      lazygit:toggle()
+    end,
+  },
 }
 
 return K

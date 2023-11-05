@@ -1,4 +1,3 @@
-local home = os.getenv("HOME")
 return {
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
