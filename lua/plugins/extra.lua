@@ -35,12 +35,4 @@ return {
       })
     end,
   },
-  {
-    "akinsho/toggleterm.nvim",
-    version = "*",
-    config = true,
-    cmd = "ToggleTerm",
-    keys = require("configs.keys").toggleterm,
-    opts = require("configs.options").toggleterm,
-  },
 }

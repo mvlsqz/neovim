@@ -36,16 +36,6 @@ K.barbecue = {
   },
 }
 
-K.toggleterm = {
-  {
-    "<leader>h",
-    function()
-      vim.cmd("ToggleTerm")
-    end,
-    desc = "Toggle float terminal",
-  },
-}
-
 K.marks = function()
   local marks = require("marks")
   return {
@@ -65,7 +55,7 @@ K.neorg = {
     function()
       vim.cmd("Neorg journal")
     end,
-    desc = "Goto notes index",
+    desc = "Open journal",
   },
   {
     "goi",
@@ -126,28 +116,10 @@ K.neorg = {
   {
     "gog",
     function()
-      local Terminal = require("toggleterm.terminal").Terminal
-      local lazygit = Terminal:new({
-        display_name = "LazyGit",
-        cmd = "lazygit",
-        dir = os.getenv("HOME") .. "/Documents/notes",
-        direction = "float",
-        close_on_exit = true,
-        float_opts = {
-          border = "curved",
-        },
-        on_close = function()
-          vim.cmd("startinsert!")
-        end,
-        winbar = {
-          enabled = true,
-          name_formatter = function(terminal)
-            return terminal.name
-          end,
-        },
-      })
-      lazygit:toggle()
+      local utils = require("lazyvim.util")
+      utils.terminal("lazygit", { cwd = os.getenv("HOME") .. "/Documents/notes/", esc_esc = false })
     end,
+    desc = "Save notes to git",
   },
 }
 
