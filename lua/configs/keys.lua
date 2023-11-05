@@ -59,27 +59,69 @@ K.marks = function()
   }
 end
 
-K.mind = {
+K.neorg = {
   {
-    "gmm",
+    "go/",
     function()
-      vim.cmd("MindOpenMain")
+      vim.cmd("Neorg journal")
     end,
-    desc = "Open Mind Main Notes",
+    desc = "Goto notes index",
   },
   {
-    "gmc",
+    "goi",
     function()
-      vim.cmd("MindClose")
+      vim.cmd("Neorg index")
     end,
-    desc = "Close Mind Main Notes",
+    desc = "Goto notes index",
   },
   {
-    "gmr",
+    "goc",
     function()
       vim.cmd("Neorg return")
     end,
     desc = "Close Notes",
+  },
+  {
+    "gon",
+    function()
+      vim.cmd("Neorg keybind norg core.dirman.new.note")
+    end,
+    desc = "Write New note",
+  },
+  {
+    "gom",
+    function()
+      vim.cmd("Neorg inject-metadata")
+    end,
+    desc = "Insert document metadata",
+  },
+  {
+    "gos",
+    function()
+      vim.cmd("Neorg generate-workspace-summary")
+    end,
+    desc = "Create/Update workspace summary",
+  },
+  {
+    "gow",
+    function()
+      vim.cmd("Neorg workspace")
+    end,
+    desc = "Switch to default workspace",
+  },
+  {
+    "gol",
+    function()
+      vim.cmd("Neorg workspace knowledge")
+    end,
+    desc = "Switch to knowledge workspace",
+  },
+  {
+    "got",
+    function()
+      vim.cmd("Neorg toc right")
+    end,
+    desc = "Open Neorg table of contents",
   },
 }
 

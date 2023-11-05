@@ -1,3 +1,4 @@
+local home = os.getenv("HOME")
 C = {}
 
 C.oil = function()
@@ -62,6 +63,76 @@ C.marks = function()
   marks.setup({})
 end
 
-C.kiwi = function() end
+C.neorg = function()
+  require("neorg").setup({
+    load = {
+      ["core.defaults"] = {},
+      ["core.summary"] = {},
+      ["core.autocommands"] = {},
+      ["core.presenter"] = {
+        config = {
+          zen_mode = "zen-mode",
+        },
+      },
+      ["core.completion"] = {
+        config = {
+          engine = "nvim-cmp",
+        },
+      },
+      ["core.esupports.indent"] = {},
+      ["core.concealer"] = {
+        config = {
+          icon_preset = "basic",
+          icons = {
+            code_block = {
+              conceal = true,
+              content_only = true,
+              padding = {
+                left = 5,
+                right = 5,
+              },
+              width = "fullwidth",
+            },
+          },
+        },
+      },
+      ["core.qol.toc"] = {
+        config = {
+          close_after_use = true,
+        },
+      },
+      ["core.export"] = {},
+      ["core.dirman"] = {
+        config = {
+          workspaces = {
+            notes = home .. "/Documents/notes",
+            knowledge = home .. "/Documents/knowledge",
+          },
+          default_workspace = "notes",
+        },
+      },
+    },
+  })
+
+  vim.wo.foldlevel = 10
+  vim.wo.number = false
+  vim.wo.cole = 1
+  vim.wo.foldenable = true
+  vim.wo.signcolumn = "yes:2"
+  vim.wo.relativenumber = true
+  vim.wo.number = false
+  vim.wo.wrap = true
+  vim.wo.linebreak = true
+  vim.api.nvim_create_autocmd("BufRead", {
+    pattern = "*.norg",
+    callback = function()
+      vim.cmd([[
+        Neorg toc right
+        ]])
+      vim.wo.conceallevel = 3
+      vim.g.maplocalleader = ","
+    end,
+  })
+end
 
 return C
