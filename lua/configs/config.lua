@@ -124,7 +124,7 @@ C.neorg = function()
   vim.wo.wrap = true
   vim.wo.linebreak = true
   vim.api.nvim_create_autocmd("BufRead", {
-    pattern = "*.norg",
+    pattern = "index.norg",
     callback = function()
       vim.cmd([[
         Neorg toc right
