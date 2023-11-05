@@ -114,7 +114,6 @@ return {
           },
         },
         ["core.export"] = {},
-        ["core.ui.calendar"] = {},
         ["core.dirman"] = {
           config = {
             workspaces = {
@@ -128,7 +127,6 @@ return {
     })
 
     vim.wo.foldlevel = 10
-    vim.wo.conceallevel = 3
     vim.wo.number = false
     vim.wo.cole = 1
     vim.wo.foldenable = true
@@ -137,5 +135,6 @@ return {
     vim.wo.number = false
     vim.wo.wrap = true
     vim.wo.linebreak = true
+    vim.o.conceallevel = 3
   end,
 }
