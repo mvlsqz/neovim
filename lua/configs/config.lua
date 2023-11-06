@@ -105,9 +105,9 @@ C.neorg = function()
       ["core.dirman"] = {
         config = {
           workspaces = {
-            main = home .. "/Documents/main",
-            knowledge = home .. "/Documents/main/knowledge",
-            notes = home .. "/Documents/main/notes",
+            main = home .. "/Documents/notes",
+            knowledge = home .. "/Documents/notes/knowledge",
+            notes = home .. "/Documents/notes/my-notes",
           },
           default_workspace = "main",
         },
