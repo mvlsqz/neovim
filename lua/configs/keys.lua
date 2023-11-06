@@ -51,7 +51,7 @@ end
 
 K.neorg = {
   {
-    "go/",
+    "goj",
     function()
       vim.cmd("Neorg journal")
     end,
@@ -72,11 +72,18 @@ K.neorg = {
     desc = "Close Notes",
   },
   {
-    "gon",
+    "gow",
     function()
       vim.cmd("Neorg keybind norg core.dirman.new.note")
     end,
-    desc = "Write New note",
+    desc = "Write new note",
+  },
+  {
+    "gon",
+    function()
+      vim.cmd("Neorg workspace notes")
+    end,
+    desc = "Switch to workspace notes",
   },
   {
     "gom",
@@ -93,14 +100,7 @@ K.neorg = {
     desc = "Create/Update workspace summary",
   },
   {
-    "gow",
-    function()
-      vim.cmd("Neorg workspace")
-    end,
-    desc = "Switch to default workspace",
-  },
-  {
-    "gol",
+    "gok",
     function()
       vim.cmd("Neorg workspace knowledge")
     end,
