@@ -106,8 +106,8 @@ C.neorg = function()
         config = {
           workspaces = {
             main = home .. "/Documents/main",
-            knowledge = home .. "/Documents/notes/knowledge",
-            notes = home .. "/Documents/notes/notes",
+            knowledge = home .. "/Documents/main/knowledge",
+            notes = home .. "/Documents/main/notes",
           },
           default_workspace = "main",
         },
