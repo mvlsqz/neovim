@@ -124,16 +124,8 @@ C.neorg = function()
   vim.wo.number = false
   vim.wo.wrap = true
   vim.wo.linebreak = true
-  vim.api.nvim_create_autocmd("BufRead", {
-    pattern = "index.norg",
-    callback = function()
-      vim.cmd([[
-        Neorg toc right
-        ]])
-      vim.wo.conceallevel = 3
-      vim.g.maplocalleader = ","
-    end,
-  })
+  vim.wo.conceallevel = 3
+  vim.g.maplocalleader = ","
 end
 
 return C
