@@ -101,6 +101,7 @@ C.neorg = function()
           close_after_use = true,
         },
       },
+      ["core.looking-glass"] = {},
       ["core.export"] = {},
       ["core.dirman"] = {
         config = {
