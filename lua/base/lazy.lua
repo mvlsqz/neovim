@@ -16,6 +16,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.formatting" },
     { import = "lazyvim.plugins.linting" },
     { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.python-semshi" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
