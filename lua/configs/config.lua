@@ -127,6 +127,8 @@ C.neorg = function()
   vim.wo.linebreak = true
   vim.wo.conceallevel = 3
   vim.g.maplocalleader = ","
+  vim.opt.foldmethod = "expr"
+  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
 return C
