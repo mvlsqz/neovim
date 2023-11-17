@@ -387,4 +387,14 @@ return {
       lualine.setup(config)
     end,
   },
+  {
+    "folke/twilight.nvim",
+    opts = {},
+  },
+  -- Lua
+  {
+    "folke/zen-mode.nvim",
+    opts = {},
+  },
+  { "shortcuts/no-neck-pain.nvim" },
 }

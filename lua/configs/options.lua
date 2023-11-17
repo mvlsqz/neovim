@@ -1,6 +1,10 @@
 O = {}
 
-O.theme = {}
+O.theme = {
+  styles = {
+    functions = { bold = true },
+  },
+}
 O.lazyvim = {
   colorscheme = function()
     require("tokyonight").load()
