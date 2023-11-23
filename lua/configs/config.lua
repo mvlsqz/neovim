@@ -7,7 +7,7 @@ end
 
 C.theme = function()
   require("tokyonight").setup({
-    style = "moon",
+    style = "night",
     transparent = true,
     styles = {
       functions = { bold = true },

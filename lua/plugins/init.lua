@@ -27,6 +27,7 @@ Plugins = {
   },
   { -- File Explorer
     "stevearc/oil.nvim",
+    cmd = { "Oil" },
     config = configs.oil,
     keys = keys.oil,
   },
