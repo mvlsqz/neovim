@@ -52,6 +52,12 @@ Plugins = {
     opts = options.theme,
     config = configs.theme,
   },
+  {
+    "NvChad/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({})
+    end,
+  },
   { -- Language Server Protocol
     "neovim/nvim-lspconfig",
     opts = options.lsp,

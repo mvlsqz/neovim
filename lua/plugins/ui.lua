@@ -212,7 +212,7 @@ return {
             -- right section. Both are highlighted by c theme .  So we
             -- are just setting default looks o statusline
             normal = { c = { fg = colors.fg, bg = colors.bg } },
-            inactive = { c = { fg = colors.fg, bg = colors.bg } },
+            inactive = { c = { fg = colors.fg, bg = colors.bg_dark } },
           },
         },
         sections = {
@@ -250,7 +250,7 @@ return {
         function()
           return ""
         end,
-        color = { fg = theme_colors.bg, bg = theme_colors.bg_popup },
+        color = { fg = theme_colors.bg, bg = theme_colors.none },
         padding = { left = 0, right = 0 }, -- We don't need space before this
       })
       local mode_color = {
@@ -380,7 +380,7 @@ return {
         function()
           return ""
         end,
-        color = { fg = theme_colors.bg, bg = theme_colors.bg_float },
+        color = { fg = theme_colors.bg, bg = theme_colors.none },
         padding = { left = 0 },
       })
 
