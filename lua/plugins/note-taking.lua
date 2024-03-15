@@ -21,6 +21,10 @@ return {
         },
       },
     },
+    {
+      "lukas-reineke/headlines.nvim",
+      opts = {},
+    },
   },
   keys = require("configs.keys").neorg,
   config = require("configs.config").neorg,
