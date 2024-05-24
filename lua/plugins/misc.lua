@@ -9,6 +9,12 @@ return {
     end,
   },
   {
+    "jrop/jq.nvim",
+    config = function()
+      return true
+    end,
+  },
+  {
     "NvChad/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({})

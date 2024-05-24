@@ -11,6 +11,7 @@ return {
       },
       terraformls = {},
       groovyls = {},
+      gopls = {},
     },
   },
 }
