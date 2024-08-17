@@ -10,7 +10,15 @@ return {
         -- cmd = { "/opt/homebrew/bin/ansible-language-server", "--stdio" },
       },
       terraformls = {},
-      groovyls = {},
+      groovyls = {
+        settings = {
+          groovy = {
+            classpath = {
+              "/Users/io/Public/Libs/java/",
+            },
+          },
+        },
+      },
       gopls = {},
     },
   },

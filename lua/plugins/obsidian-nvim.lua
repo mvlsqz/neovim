@@ -1,11 +1,11 @@
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
-  -- lazy = true,
+  lazy = true,
   cmd = "Obsidian",
-  event = {
-    "BufReadPre " .. vim.fn.expand("~") .. "/Desktop/knowledge/**.md",
-  },
+  -- event = {
+  --   "BufReadPre " .. vim.fn.expand("~") .. "/Desktop/knowledge/**.md",
+  -- } ,
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",

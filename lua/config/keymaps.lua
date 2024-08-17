@@ -4,12 +4,10 @@
 --
 local wk = require("which-key")
 
-wk.register({
-  p = {
-    name = "Pane",
-    k = { "<cmd>resize +5<cr>", "Increase Pane Width" },
-    j = { "<cmd>resize -5<cr>", "Reduce Pane Width" },
-    h = { "<cmd>vertical resize +5<cr>", "Increase Pane Height" },
-    l = { "<cmd>vertical resize -5<cr>", "reduce Pane Height" },
-  },
-}, { prefix = "<leader>" })
+wk.add({
+  { "<leader>p", group = "Pane" },
+  { "<leader>ph", "<cmd>vertical resize +5<cr>", desc = "Increase Pane Height" },
+  { "<leader>pj", "<cmd>resize -5<cr>", desc = "Reduce Pane Width" },
+  { "<leader>pk", "<cmd>resize +5<cr>", desc = "Increase Pane Width" },
+  { "<leader>pl", "<cmd>vertical resize -5<cr>", desc = "reduce Pane Height" },
+}, {})
