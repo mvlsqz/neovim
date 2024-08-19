@@ -11,3 +11,5 @@ wk.add({
   { "<leader>pk", "<cmd>resize +5<cr>", desc = "Increase Pane Width" },
   { "<leader>pl", "<cmd>vertical resize -5<cr>", desc = "reduce Pane Height" },
 }, {})
+
+vim.keymap.set("n", "<F1>", "<Esc>", { silent = true })
