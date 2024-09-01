@@ -1,8 +1,10 @@
+local colorscheme = require("plugins.colorscheme")
 return {
   "LazyVim/LazyVim",
   opts = {
-    colorscheme = function()
-      require("tokyonight").load()
-    end,
+    colorscheme = "catppuccin",
+    -- colorscheme = function()
+    --   require("tokyonight").load()
+    -- end,
   },
 }
