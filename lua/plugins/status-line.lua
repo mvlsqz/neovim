@@ -63,7 +63,7 @@ ins_left({
   function()
     return "▊"
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.green }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
@@ -75,7 +75,7 @@ ins_left({
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
-      n = colors.red,
+      n = colors.teal,
       i = colors.green,
       v = colors.blue,
       [""] = colors.blue,
@@ -123,7 +123,7 @@ ins_left({
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
     error = { fg = colors.red },
-    warn = { fg = colors.yellow },
+    warn = { fg = colors.peach },
     info = { fg = colors.cyan },
   },
 })
@@ -154,7 +154,7 @@ ins_left({
     return msg
   end,
   icon = " LSP:",
-  color = { fg = "#ffffff", gui = "bold" },
+  color = { fg = colors.overlay1, gui = "bold" },
 })
 
 -- Add components to right sections
@@ -194,7 +194,7 @@ ins_right({
   function()
     return "▊"
   end,
-  color = { fg = colors.blue },
+  color = { fg = colors.green },
   padding = { left = 1 },
 })
 
