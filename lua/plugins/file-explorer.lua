@@ -1,37 +1,4 @@
 return {
-  -- { -- File Explorer
-  --   "stevearc/oil.nvim",
-  --   cmd = { "Oil" },
-  --   config = function()
-  --     require("oil").setup({
-  --       float = {
-  --         -- Padding around the floating window
-  --         padding = 2,
-  --         max_width = 0,
-  --         max_height = 0,
-  --         border = "rounded",
-  --         win_options = {
-  --           winblend = 0,
-  --         },
-  --       },
-  --     })
-  --   end,
-  --   keys = {
-  --
-  --     {
-  --       "<leader>fe",
-  --       function()
-  --         local fe = require("oil")
-  --         if vim.bo.filetype == "oil" then
-  --           fe.close()
-  --         else
-  --           fe.open_float()
-  --         end
-  --       end,
-  --       desc = "Opens File Explorer",
-  --     },
-  --   },
-  -- },
   {
     "tamago324/lir.nvim",
     dependencies = {
@@ -55,6 +22,7 @@ return {
 
         mappings = {
           ["l"] = actions.edit,
+          ["<cr>"] = actions.edit,
           ["<C-x>"] = actions.split,
           ["<C-v>"] = actions.vsplit,
           ["<C-t>"] = actions.tabedit,
