@@ -60,17 +60,9 @@ local function ins_right(component)
 end
 
 ins_left({
-  function()
-    return "▊"
-  end,
-  color = { fg = colors.green }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-})
-
-ins_left({
   -- mode component
   function()
-    return ""
+    return " "
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -128,8 +120,6 @@ ins_left({
   },
 })
 
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
 ins_left({
   function()
     return "%="
@@ -147,42 +137,45 @@ ins_left({
       return msg
     end
     for _, client in ipairs(clients) do
+      ---@diagnostic disable-next-line: undefined-field
       local filetypes = client.config.filetypes
       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
+        if client.name ~= "null-ls" then
+          return client.name
+        end
       end
     end
     return msg
   end,
-  icon = " LSP:",
+  icon = " ",
   color = { fg = colors.yellow, gui = "bold" },
 })
 
--- Add components to right sections
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
-  fmt = string.upper, -- I'm not sure why it's upper case either ;)
+  -- "o:encoding",
+  "filetype",
+  fmt = string.lower,
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
-  fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+  fmt = string.lower,
+  icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.green, gui = "bold" },
 })
 
 ins_right({
   "branch",
-  icon = "",
+  icon = "󰘬",
   color = { fg = colors.violet, gui = "bold" },
 })
 
 ins_right({
   "diff",
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = " ", modified = "󰝤 ", removed = " " },
+  symbols = { added = "󱓊 ", modified = " ", removed = "󱓌 " },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
@@ -193,9 +186,9 @@ ins_right({
 
 ins_right({
   function()
-    return "▊"
+    return "󱑻"
   end,
-  color = { fg = colors.green },
+  color = { fg = colors.red },
   padding = { left = 1 },
 })
 
