@@ -140,8 +140,9 @@ ins_left({
   -- Lsp server name .
   function()
     local msg = "No Active Lsp"
-    local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-    local clients = vim.lsp.get_active_clients()
+    local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
+    local clients = vim.lsp.get_clients()
+
     if next(clients) == nil then
       return msg
     end
@@ -154,7 +155,7 @@ ins_left({
     return msg
   end,
   icon = " LSP:",
-  color = { fg = colors.overlay1, gui = "bold" },
+  color = { fg = colors.yellow, gui = "bold" },
 })
 
 -- Add components to right sections
