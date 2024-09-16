@@ -24,7 +24,7 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 end)
 
 M = {}
-M.font_size = 22
+M.font_size = 21
 M.keys = {
   {
     key = "LeftArrow",
