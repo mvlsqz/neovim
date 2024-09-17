@@ -9,9 +9,7 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [
-  'exec-and-forget /usr/local/bin/borders'
-]
+after-startup-command = ['exec-and-forget /usr/local/bin/borders']
 
 # Start AeroSpace at login
 start-at-login = true
@@ -53,12 +51,12 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal =18
-inner.vertical =  18
-outer.left =      18
-outer.bottom =    18
-outer.top =       18
-outer.right =     18
+inner.horizontal = 18
+inner.vertical = 18
+outer.left = 18
+outer.bottom = 18
+outer.top = 18
+outer.right = 18
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -90,7 +88,6 @@ alt-shift-equal = 'resize smart +50'
 cmd-1 = 'workspace 1'
 cmd-2 = 'workspace 2'
 cmd-3 = 'workspace 3'
-cmd-4 = 'workspace 4'
 cmd-5 = 'workspace 5'
 cmd-6 = 'workspace 6'
 cmd-7 = 'workspace 7'
@@ -100,7 +97,6 @@ cmd-a = 'workspace A' # In your config, you can drop workspace bindings that you
 cmd-b = 'workspace B'
 cmd-d = 'workspace D'
 cmd-e = 'workspace E'
-cmd-f = 'workspace F'
 cmd-g = 'workspace G'
 cmd-i = 'workspace I'
 cmd-m = 'workspace M'
@@ -117,7 +113,6 @@ cmd-y = 'workspace Y'
 cmd-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 cmd-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
 cmd-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
-cmd-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
 cmd-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
 cmd-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
 cmd-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
@@ -127,7 +122,6 @@ cmd-shift-a = ['move-node-to-workspace A', 'workspace A']
 cmd-shift-b = ['move-node-to-workspace B', 'workspace B']
 cmd-shift-d = ['move-node-to-workspace D', 'workspace D']
 cmd-shift-e = ['move-node-to-workspace E', 'workspace E']
-cmd-shift-f = ['move-node-to-workspace F', 'workspace F']
 cmd-shift-g = ['move-node-to-workspace G', 'workspace G']
 cmd-shift-i = ['move-node-to-workspace I', 'workspace I']
 cmd-shift-m = ['move-node-to-workspace M', 'workspace M']
@@ -150,7 +144,10 @@ alt-shift-r = 'mode resize'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
