@@ -1,8 +1,39 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+
+wezterm.on("set-dev-password", function(_, pane)
+  local _, stdout, _ = wezterm.run_child_process({
+    "security",
+    "find-generic-password",
+    "-w",
+    "-a",
+    "DevLikePassword",
+  })
+  pane:send_text(stdout)
+end)
+wezterm.on("set-prod-password", function(_, pane)
+  local _, stdout, _ = wezterm.run_child_process({
+    "security",
+    "find-generic-password",
+    "-w",
+    "-a",
+    "ProdLikePassword",
+  })
+  pane:send_text(stdout)
+end)
 M = {}
 M.font_size = 21
 M.keys = {
+  {
+    key = ".",
+    mods = "OPT",
+    action = act.EmitEvent("set-dev-password"),
+  },
+  {
+    key = ";",
+    mods = "OPT",
+    action = act.EmitEvent("set-prod-password"),
+  },
   {
     key = "LeftArrow",
     mods = "OPT",
