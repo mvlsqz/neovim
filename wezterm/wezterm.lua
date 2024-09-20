@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local colors = require("custom_colors").colors
 local user_configs = require("user_configs")
-local my_colorscheme = colors.mocha
+local my_colorscheme = colors.primeppuccin
 
 local function font_with_fallback(name, params)
   local names = {
