@@ -25,31 +25,40 @@ M = {}
 M.font_size = 21
 M.keys = {
   {
-    key = "R",
-    mods = "CTRL|SHIFT",
+    key = ".",
+    mods = "OPT",
     action = wezterm.action_callback(function(window, pane)
       -- We're going to dynamically construct the list and then
       -- show it. Here we're just showing some numbers but you
       -- could read or compute data from other sources
 
-      local choices = {}
-      for n = 1, 20 do
-        table.insert(choices, { label = tostring(n) })
-      end
+      local choices = {
+        {
+          label = "DevLikePassword",
+        },
+        {
+          label = "ProdLikePassword",
+        },
+      }
 
       window:perform_action(
         act.InputSelector({
-          action = wezterm.action_callback(function(window, pane, id, label)
+          action = wezterm.action_callback(function(_, pane0, id, label)
             if not id and not label then
               wezterm.log_info("cancelled")
             else
-              wezterm.log_info("you selected ", id, label)
-              -- Since we didn't set an id in this example, we're
               -- sending the label
-              pane:send_text(label)
+              local a, stdout, b = wezterm.run_child_process({
+                "security",
+                "find-generic-password",
+                "-w",
+                "-a",
+                label,
+              })
+              pane0:send_text(stdout)
             end
           end),
-          title = "I am title",
+          title = "Select Password",
           choices = choices,
           alphabet = "123456789",
           description = "Write the number you want to choose or press / to search.",
@@ -57,16 +66,6 @@ M.keys = {
         pane
       )
     end),
-  },
-  {
-    key = ".",
-    mods = "OPT",
-    action = act.EmitEvent("set-dev-password"),
-  },
-  {
-    key = ";",
-    mods = "OPT",
-    action = act.EmitEvent("set-prod-password"),
   },
   {
     key = "LeftArrow",
