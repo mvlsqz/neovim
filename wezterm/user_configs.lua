@@ -47,8 +47,7 @@ M.keys = {
             if not id and not label then
               wezterm.log_info("cancelled")
             else
-              -- sending the label
-              local a, stdout, b = wezterm.run_child_process({
+              local _, stdout, _ = wezterm.run_child_process({
                 "security",
                 "find-generic-password",
                 "-w",
