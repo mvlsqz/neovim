@@ -165,7 +165,8 @@ esc = ['mode main']
 7 = 'secondary'
 8 = 'secondary'
 9 = 'secondary'
-b = 'secondary'
+B = 'secondary'
+M = 'secondary'
 
 [[on-window-detected]]
 if.app-id = "com.github.wez.wezterm"
