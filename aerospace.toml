@@ -87,13 +87,11 @@ alt-shift-equal = 'resize smart +50'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 cmd-1 = 'workspace 1'
 cmd-2 = 'workspace 2'
-cmd-3 = 'workspace 3'
-cmd-5 = 'workspace 5'
 cmd-6 = 'workspace 6'
 cmd-7 = 'workspace 7'
 cmd-8 = 'workspace 8'
 cmd-9 = 'workspace 9'
-cmd-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+cmd-a = 'workspace A'
 cmd-b = 'workspace B'
 cmd-d = 'workspace D'
 cmd-e = 'workspace E'
@@ -112,8 +110,6 @@ cmd-y = 'workspace Y'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 cmd-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
 cmd-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
-cmd-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
-cmd-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
 cmd-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
 cmd-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 cmd-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
@@ -162,6 +158,14 @@ l = 'resize width +50'
 b = 'balance-sizes'
 esc = ['mode main']
 
+[workspace-to-monitor-force-assignment]
+1 = 'secondary'
+2 = 'secondary'
+6 = 'secondary'
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+b = 'secondary'
 
 [[on-window-detected]]
 if.app-id = "com.github.wez.wezterm"
