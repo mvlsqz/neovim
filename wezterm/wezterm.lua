@@ -129,7 +129,7 @@ return {
     indexed = { [16] = my_colorscheme.peach, [17] = my_colorscheme.rosewater },
     tab_bar = {
       active_tab = {
-        bg_color = my_colorscheme.sapphire,
+        bg_color = my_colorscheme.sky,
         fg_color = my_colorscheme.crust,
       },
       background = my_colorscheme.crust,
@@ -165,7 +165,7 @@ return {
   enable_tab_bar = true,
   hide_tab_bar_if_only_one_tab = true,
   show_tab_index_in_tab_bar = false,
-  tab_bar_at_bottom = true,
+  tab_bar_at_bottom = false,
 
   -- General
   automatically_reload_config = true,

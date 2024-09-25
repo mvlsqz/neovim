@@ -156,14 +156,14 @@ ins_right({
   "filetype",
   fmt = string.lower,
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = colors.teal, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.lower,
-  icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = "bold" },
+  icons_enabled = true,
+  color = { fg = colors.sky, gui = "bold" },
 })
 
 ins_right({
@@ -174,7 +174,6 @@ ins_right({
 
 ins_right({
   "diff",
-  -- Is it me or the symbol for modified us really weird
   symbols = { added = "󱓊 ", modified = " ", removed = "󱓌 " },
   diff_color = {
     added = { fg = colors.green },
