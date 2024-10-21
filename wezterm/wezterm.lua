@@ -176,4 +176,7 @@ return {
     active_titlebar_bg = my_colorscheme.base,
     font = font_with_fallback(font_name, { bold = true }),
   },
+
+  -- Misc
+  audible_bell = "Disabled",
 }
