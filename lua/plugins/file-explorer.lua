@@ -5,15 +5,13 @@ return {
     require("oil").setup({
       columns = { "icon" },
       keymaps = {
-        ["<C-h>"] = false,
-        ["<M-h>"] = "actions.select_split",
+        ["q"] = "actions.close",
       },
       view_options = {
         show_hidden = true,
       },
     })
 
-    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "open parent directory" })
-    vim.keymap.set("n", "<space>-", require("oil").toggle_float)
+    vim.keymap.set("n", "<leader>fe", require("oil").toggle_float, { desc = "open parent directory" })
   end,
 }
