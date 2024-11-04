@@ -1,10 +1,19 @@
+local hr = tonumber(os.date("%H", os.time()))
+local flavour
+
+if hr > 9 and hr < 18 then
+  flavour = "latte"
+else
+  flavour = "mocha"
+end
+
 return {
   {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
     opts = {
-      flavour = "mocha",
+      flavour = flavour,
       transparent_background = true,
       color_overrides = {
         latte = {

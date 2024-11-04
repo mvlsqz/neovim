@@ -104,7 +104,6 @@ cmd-p = 'workspace P'
 cmd-r = 'workspace R'
 cmd-t = 'workspace T'
 cmd-u = 'workspace U'
-cmd-x = 'workspace X'
 cmd-y = 'workspace Y'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -126,7 +125,6 @@ cmd-shift-o = ['move-node-to-workspace O', 'workspace O']
 cmd-shift-p = ['move-node-to-workspace P', 'workspace P']
 cmd-shift-t = ['move-node-to-workspace T', 'workspace T']
 cmd-shift-u = ['move-node-to-workspace U', 'workspace U']
-cmd-shift-x = ['move-node-to-workspace X', 'workspace X']
 cmd-shift-y = ['move-node-to-workspace Y', 'workspace Y']
 
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
