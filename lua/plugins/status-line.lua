@@ -1,4 +1,5 @@
-local colors = require("catppuccin.palettes").get_palette("mocha")
+local flavour = require("mvlsqz").colorscheme_flavour()
+local colors = require("catppuccin.palettes").get_palette(flavour)
 
 local conditions = {
   buffer_not_empty = function()
@@ -156,7 +157,7 @@ ins_right({
   "filetype",
   fmt = string.lower,
   cond = conditions.hide_in_width,
-  color = { fg = colors.teal, gui = "bold" },
+  color = { fg = colors.blue, gui = "bold" },
 })
 
 ins_right({

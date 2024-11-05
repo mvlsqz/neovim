@@ -1,12 +1,4 @@
-local hr = tonumber(os.date("%H", os.time()))
-local flavour
-
-if hr > 9 and hr < 18 then
-  flavour = "latte"
-else
-  flavour = "mocha"
-end
-
+local flavour = require("mvlsqz").colorscheme_flavour()
 return {
   {
     "catppuccin/nvim",
