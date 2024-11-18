@@ -1,4 +1,6 @@
-local flavour = require("mvlsqz").colorscheme_flavour()
+local scheme_config = require("mvlsqz")
+local flavour = scheme_config.colorscheme_flavour()
+
 return {
   {
     "catppuccin/nvim",
