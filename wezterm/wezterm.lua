@@ -3,28 +3,28 @@ local config = wezterm.config_builder()
 local colors = require("colors").get_color_scheme()
 
 local function font_with_fallback(name, params)
-	local names = {
-		{
-			family = name,
-			harfbuzz_features = {
-				"calt",
-				"liga",
-				"dlig",
-				"ss01",
-				"ss02",
-				"ss03",
-				"ss04",
-				"ss05",
-				"ss06",
-				"ss07",
-				"ss08",
-			},
-		},
-		"JetBrainsMono Nerd Font",
-		"Noto Emoji",
-		"Apple Color Emoji",
-	}
-	return wezterm.font_with_fallback(names, params)
+  local names = {
+    {
+      family = name,
+      harfbuzz_features = {
+        "calt",
+        "liga",
+        "dlig",
+        "ss01",
+        "ss02",
+        "ss03",
+        "ss04",
+        "ss05",
+        "ss06",
+        "ss07",
+        "ss08",
+      },
+    },
+    "JetBrainsMono Nerd Font",
+    "Noto Emoji",
+    "Apple Color Emoji",
+  }
+  return wezterm.font_with_fallback(names, params)
 end
 local font_name = "Monaspace Argon Var"
 
@@ -48,19 +48,19 @@ config.font_size = 19
 config.font = font_with_fallback(font_name)
 config.bold_brightens_ansi_colors = true
 config.font_rules = {
-	{
-		italic = false,
-		intensity = "Normal",
-		font = font_with_fallback("Monaspace Neon Var", { weight = "Regular" }),
-	},
-	{
-		intensity = "Bold",
-		font = font_with_fallback("Monaspace Krypton Var", { weight = "ExtraBold" }),
-	},
-	{
-		italic = true,
-		font = font_with_fallback("Monaspace Radon", { weight = "ExtraLight", italic = true }),
-	},
+  {
+    italic = false,
+    intensity = "Normal",
+    font = font_with_fallback("Monaspace Neon Var", { weight = "Regular" }),
+  },
+  {
+    intensity = "Bold",
+    font = font_with_fallback("Monaspace Krypton Var", { weight = "ExtraBold" }),
+  },
+  {
+    italic = true,
+    font = font_with_fallback("Monaspace Radon", { weight = "ExtraLight", italic = true }),
+  },
 }
 
 -- Cursor
