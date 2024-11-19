@@ -177,7 +177,7 @@ end
 M.get_color_scheme = function()
   local hr = tonumber(os.date("%H", os.time()))
   local colors = {}
-  if hr > 8 and hr < 16 then
+  if hr > 7 and hr < 16 then
     colors = set_colors(flavours.latte)
     wezterm.log_info("Loading flavor: latte")
   else

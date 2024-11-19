@@ -4,7 +4,7 @@ M.colorscheme_flavour = function()
   local hr = tonumber(os.date("%H", os.time()))
   local flavour
 
-  if hr > 8 and hr < 16 then
+  if hr > 7 and hr < 16 then
     flavour = "latte"
   else
     flavour = "mocha"
