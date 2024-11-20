@@ -182,7 +182,7 @@ M.get_color_scheme = function()
     wezterm.log_info("Loading flavor: latte")
   else
     colors = set_colors(flavours.primeppuccin)
-    wezterm.log_info("Loading flavor: moccha")
+    wezterm.log_info("Loading flavor: primeppuccin")
   end
   return colors
 end
