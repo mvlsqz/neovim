@@ -59,11 +59,11 @@ function M.setup(config)
     { mods = M.mod, key = "k", action = act.ScrollByPage(-0.5) },
     { mods = M.mod, key = "j", action = act.ScrollByPage(0.5) },
     -- New Tab
-    { mods = M.mod, key = "t", action = act.SpawnTab("CurrentPaneDomain") },
+    { mods = M.mod, key = "t", action = act({ SpawnCommandInNewTab = { cwd = wezterm.home_dir } }) },
     -- Splits
     { mods = M.mod, key = "Enter", action = M.smart_split },
     { mods = M.alt_mod, key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-    { mods = M.alt_mod, key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { mods = M.mod, key = "-", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     { mods = M.alt_mod, key = "<", action = act.DecreaseFontSize },
     { mods = M.alt_mod, key = ">", action = act.IncreaseFontSize },
     -- Move Tabs

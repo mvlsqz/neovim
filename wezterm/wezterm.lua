@@ -37,6 +37,7 @@ require("keys").setup(config)
 
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
+config.front_end = "OpenGL"
 
 config.underline_thickness = 3
 config.cursor_thickness = 4
