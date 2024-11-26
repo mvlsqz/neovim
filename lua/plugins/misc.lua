@@ -1,6 +1,6 @@
 return {
   {
-    -- Scape from insert mode
+    -- Escape from insert mode
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup({
