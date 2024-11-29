@@ -6,12 +6,14 @@ return {
       columns = { "icon" },
       keymaps = {
         ["q"] = "actions.close",
+        ["H"] = "actions.parent",
+        ["L"] = "actions.select",
       },
       view_options = {
         show_hidden = true,
       },
     })
 
-    vim.keymap.set("n", "<leader>fe", require("oil").toggle_float, { desc = "open parent directory" })
+    vim.keymap.set("n", "<leader>fe", require("oil").toggle_float, { desc = "Open file explorer" })
   end,
 }

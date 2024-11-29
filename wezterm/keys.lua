@@ -20,7 +20,7 @@ function M.setup(config)
   config.keys = {
     {
       key = ".",
-      mods = "OPT",
+      mods = M.mod,
       action = wezterm.action_callback(function(window, pane)
         local choices = {
           {
