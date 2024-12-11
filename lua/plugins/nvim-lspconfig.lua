@@ -1,8 +1,7 @@
+local user_home = vim.fn.expand("$HOME")
 return {
   "neovim/nvim-lspconfig",
-  ---@class PluginLspOpts
   opts = {
-    ---@type lspconfig.options
     servers = {
       pyright = {},
       terraformls = {},
@@ -10,7 +9,7 @@ return {
         settings = {
           groovy = {
             classpath = {
-              "/Users/io/Public/Libs/java/",
+              user_home .. "/.gradle/caches/modules-2/files-2.1",
             },
           },
         },

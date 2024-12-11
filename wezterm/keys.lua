@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local M = {}
 
-M.mod = "ALT"
+M.mod = "ALT|CTRL"
 M.alt_mod = "ALT|SHIFT"
 
 M.smart_split = wezterm.action_callback(function(window, pane)
@@ -69,7 +69,7 @@ function M.setup(config)
     -- Move Tabs
     { mods = M.mod, key = "LeftArrow", action = act.MoveTabRelative(1) },
     { mods = M.mod, key = "RightArrow", action = act.MoveTabRelative(-1) },
-    { mods = M.mod, key = "l", action = act({ ActivateTabRelative = 1 }) },
+    -- { mods = M.mod, key = "l", action = act({ ActivateTabRelative = 1 }) },
     { mods = M.mod, key = "h", action = act({ ActivateTabRelative = -1 }) },
     { mods = M.mod, key = "R", action = wezterm.action.RotatePanes("Clockwise") },
     { mods = M.mod, key = "s", action = wezterm.action.PaneSelect({}) },

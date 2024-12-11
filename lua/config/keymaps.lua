@@ -13,5 +13,4 @@ wk.add({
 }, {})
 
 vim.keymap.set("n", "<F1>", "<Esc>", { silent = true })
-vim.keymap.set("t", "<Esc>", "<nop>", { silent = true })
-vim.keymap.set("t", "<Esc><Esc>", "<nop>", { silent = true })
+vim.keymap.set("i", "<F1>", "<Esc>", { silent = true })

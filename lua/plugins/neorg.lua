@@ -2,11 +2,24 @@ return {
   "nvim-neorg/neorg",
   lazy = false,
   version = "*",
+  dependencies = { "folke/zen-mode.nvim" },
   config = function()
     require("neorg").setup({
       load = {
         ["core.defaults"] = {},
-        ["core.concealer"] = {},
+        ["core.concealer"] = {
+          config = {
+            icons = {
+              code_block = {
+                conceal = true,
+                padding = {
+                  left = 4,
+                  right = 4,
+                },
+              },
+            },
+          },
+        },
         ["core.dirman"] = {
           config = {
             workspaces = {
@@ -19,6 +32,7 @@ return {
           },
         },
         ["core.summary"] = {},
+        ["core.ui.calendar"] = {},
         ["core.export"] = {},
         ["core.export.markdown"] = {},
         ["core.presenter"] = {
@@ -26,6 +40,7 @@ return {
             zen_mode = "zen-mode",
           },
         },
+        ["core.queries.native"] = {},
       },
     })
   end,

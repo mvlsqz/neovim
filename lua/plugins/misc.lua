@@ -1,5 +1,29 @@
 return {
   {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+      },
+    },
+    config = function()
+      require("telescope").setup({
+        pickers = {
+          find_files = {
+            theme = "ivy",
+          },
+        },
+        extensions = {
+          fzf = {},
+        },
+      })
+
+      require("telescope").load_extension("fzf")
+    end,
+  },
+  {
     -- Escape from insert mode
     "max397574/better-escape.nvim",
     config = function()
