@@ -32,6 +32,8 @@ return {
             TelescopeResultsNormal = { bg = colors.mantle },
             TelescopeResultsTitle = { fg = colors.mantle, bg = colors.mantle },
             TelescopeSelection = { bg = colors.surface0 },
+            FzfLuaBorder = { bg = colors.base, fg = colors.base },
+            FzfLuaPreviewBorder = { bg = colors.base, fg = colors.base },
             VertSplit = { bg = colors.base, fg = colors.surface0 },
             WhichKeyFloat = { bg = colors.mantle },
             YankHighlight = { bg = colors.surface2 },
