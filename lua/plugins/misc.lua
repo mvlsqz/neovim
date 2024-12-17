@@ -10,9 +10,15 @@ return {
     },
     config = function()
       require("telescope").setup({
-        pickers = {
-          find_files = {
-            theme = "ivy",
+        defaults = {
+          sorting_strategy = "ascending",
+          layout_strategy = "flex",
+          layout_config = {
+            horizontal = { preview_cutoff = 80, preview_width = 0.55 },
+            vertical = { mirror = true, preview_cutoff = 25 },
+            prompt_position = "top",
+            width = 0.87,
+            height = 0.80,
           },
         },
         extensions = {
@@ -35,6 +41,9 @@ return {
             j = {
               k = "<Esc>",
               j = "<Esc>",
+            },
+            J = {
+              J = "<Esc>",
             },
           },
           t = {
