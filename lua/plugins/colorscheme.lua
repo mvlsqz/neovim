@@ -40,6 +40,13 @@ return {
             FidgetTask = { fg = colors.subtext2 },
             FidgetTitle = { fg = colors.peach },
 
+            RenderMarkdownH1Bg = { bg = colors.mantle },
+            RenderMarkdownH2Bg = { bg = colors.mantle },
+            RenderMarkdownH3Bg = { bg = colors.mantle },
+            RenderMarkdownH4Bg = { bg = colors.mantle },
+            RenderMarkdownH5Bg = { bg = colors.mantle },
+            RenderMarkdownH6Bg = { bg = colors.mantle },
+
             IblIndent = { fg = colors.surface0 },
             IblScope = { fg = colors.overlay0 },
 
