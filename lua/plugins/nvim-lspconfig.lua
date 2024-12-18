@@ -1,4 +1,4 @@
-local user_home = vim.fn.expand("$HOME")
+local user_home = vim.fn.expand("~")
 return {
   "neovim/nvim-lspconfig",
   opts = {

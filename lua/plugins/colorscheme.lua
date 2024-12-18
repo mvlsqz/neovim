@@ -340,6 +340,7 @@ return {
         alpha = false,
         barbar = false,
         beacon = false,
+        blink_cmp = true,
         cmp = true,
         dap = true,
         dap_ui = true,
