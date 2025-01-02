@@ -9,5 +9,7 @@ font-size = 19
 macos-titlebar-style = hidden
 
 window-padding-balance = true
-
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+macos-option-as-alt = true
 theme = dark:mocha,light:latte
