@@ -227,7 +227,7 @@ plugins {
   plugin-manager location="zellij:plugin-manager"
 }
 load_plugins {
-  "file:/Users/io/.config/zellij/plugins/zjframes.wasm" {
+  "file:~/.config/zellij/plugins/zjframes.wasm" {
     hide_frame_for_single_pane "true"
     hide_frame_except_for_search "true"
     hide_frame_except_for_fullscreen "true"
