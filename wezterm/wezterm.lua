@@ -33,7 +33,7 @@ wezterm.log_info("reloading")
 require("tabs").setup(config)
 require("mouse").setup(config)
 require("links").setup(config)
-require("keys").setup(config)
+-- require("keys").setup(config)
 
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
@@ -76,5 +76,6 @@ config.command_palette_font_size = 13
 config.command_palette_bg_color = colors.cursor_fg
 config.command_palette_fg_color = colors.ansi[7]
 config.audible_bell = "Disabled"
+config.send_composed_key_when_right_alt_is_pressed = false
 
 return config
