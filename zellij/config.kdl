@@ -1,6 +1,6 @@
 keybinds clear-defaults=true {
   normal {
-    // bind "Alt c" { Copy; }
+    bind "Super c" { Copy; }
   }
   locked {
     bind "Alt g" { SwitchToMode "Normal"; }
@@ -24,6 +24,7 @@ keybinds clear-defaults=true {
     bind "l" "Right" { MoveFocus "Right"; }
     bind "j" "Down" { MoveFocus "Down"; }
     bind "k" "Up" { MoveFocus "Up"; }
+    // bind "i" { TogglePanePinned; SwitchToMode "Locked"; }
     bind "p" { SwitchFocus; }
     bind "n" { NewPane; SwitchToMode "Normal"; }
     bind "u" { NewPane "Up"; SwitchToMode "Normal"; }
@@ -80,8 +81,7 @@ keybinds clear-defaults=true {
     bind "d" { HalfPageScrollDown; }
     bind "u" { HalfPageScrollUp; }
     bind "y" { Copy;}
-    // uncomment this and adjust key if using copy_on_select=false
-    // bind "Alt c" { Copy; }
+    bind "Super c" { Copy; }
   }
   search {
     bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }

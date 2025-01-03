@@ -63,7 +63,7 @@ end
 ins_left({
   -- mode component
   function()
-    return " "
+    return " "
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -186,7 +186,7 @@ ins_right({
 
 ins_right({
   function()
-    return "󱑻"
+    return "󱑻 "
   end,
   color = { fg = colors.red },
   padding = { left = 1 },
