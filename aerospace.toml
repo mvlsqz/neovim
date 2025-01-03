@@ -64,7 +64,7 @@ outer.right = 18
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
 
-cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+cmd-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
@@ -168,6 +168,9 @@ M = 'secondary'
 
 [[on-window-detected]]
 if.app-id = "com.github.wez.wezterm"
+run = 'move-node-to-workspace T'
+[[on-window-detected]]
+if.app-id = "com.mitchellh.ghostty"
 run = 'move-node-to-workspace T'
 [[on-window-detected]]
 if.app-id = "com.apple.Safari"
