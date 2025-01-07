@@ -1,6 +1,6 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Super c" { Copy; }
+    bind "Super c" { EditScrollback; }
   }
   locked {
     bind "Alt g" { SwitchToMode "Normal"; }
