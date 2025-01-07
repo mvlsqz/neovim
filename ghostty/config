@@ -3,25 +3,27 @@ font-style = Regular
 font-family-bold = Monaspace Krypton Var
 font-style-bold = ExtraBold
 font-family-italic = Monaspace Radon
-font-style-italic = ExtraLight
+font-style-italic = Wide SemiBold Italic
 font-size = 19
-font-feature=calt
-font-feature=liga
-font-feature=dlig
-font-feature=ss01
-font-feature=ss02
-font-feature=ss03
-font-feature=ss04
-font-feature=ss05
-font-feature=ss06
-font-feature=ss07
-font-feature=ss08
+font-feature = calt
+font-feature = liga
+font-feature = dlig
+font-feature = ss01
+font-feature = ss02
+font-feature = ss03
+font-feature = ss04
+font-feature = ss05
+font-feature = ss06
+font-feature = ss07
+font-feature = ss08
 
 macos-titlebar-style = hidden
 
 window-padding-balance = true
-window-padding-x = 5
-window-padding-x = 5
+mouse-scroll-multiplier = 0.5
+window-decoration = true
+window-padding-x = 8
+window-padding-y = 8
 keybind = alt+left=unbind
 keybind = cmd+c=unbind
 keybind = alt+right=unbind
