@@ -21,11 +21,15 @@ macos-titlebar-style = hidden
 
 window-padding-balance = true
 mouse-scroll-multiplier = 0.5
-window-decoration = true
+window-decoration = false
 window-padding-x = 8
 window-padding-y = 8
+macos-window-shadow = false
 keybind = alt+left=unbind
 keybind = cmd+c=unbind
 keybind = alt+right=unbind
 macos-option-as-alt = true
 theme = dark:mocha,light:latte
+background-opacity = 0.98
+adjust-cell-width = 0
+adjust-cell-height = 25%

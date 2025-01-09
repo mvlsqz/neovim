@@ -1,6 +1,17 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Super c" { EditScrollback; }
+    bind "Super c" { Copy; }
+    bind "Alt ." {
+      Run "bash" "pick-password" {
+        close_on_exit true
+        name "pick-password"
+        floating true
+        width "20%"
+        height "20%"
+      };
+      TogglePaneEmbedOrFloating;
+      SwitchToMode "normal";
+    }
   }
   locked {
     bind "Alt g" { SwitchToMode "Normal"; }
