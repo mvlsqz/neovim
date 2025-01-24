@@ -9,3 +9,4 @@ data
 .luarc.json
 lazy-lock.json
 lazyvim.json
+secrets.fish

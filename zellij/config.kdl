@@ -2,7 +2,7 @@ keybinds clear-defaults=true {
   normal {
     bind "Super c" { Copy; }
     bind "Alt ." {
-      Run "bash" "pick-password" {
+      Run "fish" "pick-password" {
         close_on_exit true
         name "pick-password"
         floating true
@@ -245,10 +245,18 @@ load_plugins {
   }
 }
 
-simplified_ui true
-default_layout "compact"
-scroll_buffer_size 100000
-copy_command "pbcopy"
+ui {
+  pane_frames {
+    rounded_corners  true
+  }
+}
+
 copy_clipboard "primary"
+copy_command "pbcopy"
 copy_on_select false
+default_layout "compact"
+default_shell "fish"
+pane_frames false
+scroll_buffer_size 100000
+simplified_ui true
 theme "latte"
