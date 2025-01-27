@@ -184,3 +184,6 @@ run = ['layout tiling', 'move-node-to-workspace M']
 [[on-window-detected]]
 if.app-id = "com.microsoft.teams2"
 run = ['layout tiling', 'move-node-to-workspace M']
+[[on-window-detected]]
+if.app-id = "md.obsidian"
+run = ['layout tiling', 'move-node-to-workspace N']
