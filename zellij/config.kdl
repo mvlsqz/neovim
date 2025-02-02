@@ -2,9 +2,9 @@ keybinds clear-defaults=true {
   normal {
     bind "Super c" { Copy; }
     bind "Alt ." {
-      Run "fish" "pick-password" {
+      Run  "sunbeam" {
         close_on_exit true
-        name "pick-password"
+        name "Sunbeam"
         floating true
         width "20%"
         height "20%"
@@ -35,7 +35,7 @@ keybinds clear-defaults=true {
     bind "l" "Right" { MoveFocus "Right"; }
     bind "j" "Down" { MoveFocus "Down"; }
     bind "k" "Up" { MoveFocus "Up"; }
-    // bind "i" { TogglePanePinned; SwitchToMode "Locked"; }
+    bind "i" { TogglePanePinned; SwitchToMode "Normal"; }
     bind "p" { SwitchFocus; }
     bind "n" { NewPane; SwitchToMode "Normal"; }
     bind "u" { NewPane "Up"; SwitchToMode "Normal"; }

@@ -6,6 +6,9 @@
 #     # set ZELLIJ_AUTO_EXIT true
 #     eval (zellij setup --generate-auto-start fish | string collect)
 # end
+
+set -x PATH $HOME/.cargo/bin $PATH
+
 if not set -q ZELLIJ
     if test "$ZELLIJ_AUTO_ATTACH" = true
         zellij attach -c

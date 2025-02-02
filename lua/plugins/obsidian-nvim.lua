@@ -9,6 +9,7 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
+    "saghen/blink.cmp",
     {
       "lukas-reineke/headlines.nvim",
       dependencies = "nvim-treesitter/nvim-treesitter",
@@ -38,7 +39,7 @@ return {
     -- dir = "~/vaults/work",
 
     -- Optional, if you keep notes in a specific subdirectory of your vault.
-    notes_subdir = "notes",
+    notes_subdir = "1. Inbox",
 
     -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
     -- levels defined by "vim.log.levels.*".
@@ -46,13 +47,18 @@ return {
 
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
-      folder = "notes/dailies",
+      folder = "dailies",
       -- Optional, if you want to change the date format for the ID of daily notes.
       date_format = "%Y-%m-%d",
       -- Optional, if you want to change the date format of the default alias of daily notes.
       alias_format = "%B %-d, %Y",
       -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
       template = nil,
+    },
+
+    completion = {
+      nvim_cmp = true,
+      min_chars = 2,
     },
 
     -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this

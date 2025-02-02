@@ -6,12 +6,8 @@ return {
       lazy = true,
       version = false,
     },
-    { "L3MON4D3/LuaSnip", version = "v2.*" },
   },
   opts = {
-    snippets = {
-      preset = "luasnip",
-    },
     keymap = {
       preset = "enter",
       ["<Tab>"] = { "select_next", "fallback" },
