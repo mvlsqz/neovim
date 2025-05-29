@@ -12,6 +12,7 @@ if vim.filetype then
       [".*/tasks.*/.*%.ya?ml"] = "yaml.ansible",
       [".*/molecule/.*%.ya?ml"] = "yaml.ansible",
       [".*/provision/.*%.ya?ml"] = "yaml.ansible",
+      [".*/gcp/.*%.ya?ml"] = "yaml.ansible",
     },
   })
 else
@@ -39,6 +40,8 @@ else
       "*/molecule/*.yaml",
       "*/provision/*.yaml",
       "*/provision/*.yml",
+      "*/gcp/*.yaml",
+      "*/gcp/*.yml",
     },
     callback = function()
       vim.bo.filetype = "yaml.ansible"

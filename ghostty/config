@@ -1,5 +1,5 @@
-font-family = Monaspace Neon Var
-font-style = Regular
+font-family = Monaspace Argon Frozen
+font-style = Light
 font-family-bold = Monaspace Krypton Var
 font-style-bold = ExtraBold
 font-family-italic = Monaspace Radon
@@ -28,6 +28,8 @@ macos-window-shadow = false
 keybind = alt+left=unbind
 keybind = cmd+c=unbind
 keybind = alt+right=unbind
+keybind = alt+b=unbind
+keybind = alt+f=unbind
 macos-option-as-alt = true
 theme = dark:mocha,light:latte
 background-opacity = 0.98

@@ -1,50 +1,46 @@
 return {
   "epwalsh/obsidian.nvim",
   version = "*",
-  lazy = true,
-  cmd = "Obsidian",
+  lazy = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "saghen/blink.cmp",
     {
+      "MeanderingProgrammer/render-markdown.nvim",
       "lukas-reineke/headlines.nvim",
-      dependencies = "nvim-treesitter/nvim-treesitter",
+      dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+      },
       config = true, -- or `opts = {}`
     },
   },
   opts = {
     workspaces = {
       {
-        name = "work",
-        path = "~/Documents/Projects",
+        name = "knowledge",
+        path = vim.fn.expand("~/Documents/obsidian/knowledge"),
       },
     },
 
-    -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
-    -- 'workspaces'. For example:
-    -- dir = "~/vaults/work",
-
-    -- Optional, if you keep notes in a specific subdirectory of your vault.
-    notes_subdir = "1. Inbox",
-
-    log_level = vim.log.levels.INFO,
+    notes_subdir = "00 - Fleeting",
 
     daily_notes = {
-      -- Optional, if you keep daily notes in a separate directory.
-      folder = "dailies",
-      -- Optional, if you want to change the date format for the ID of daily notes.
+      folder = "05 - Daily",
       date_format = "%Y-%m-%d",
       alias_format = "%B %-d, %Y",
-      template = nil,
+      template = "daily_template.md",
+    },
+
+    templates = {
+      folder = "04 - Templates",
+      note_template = "concept_template.md",
+      daily_note_template = "daily_template.md",
     },
 
     completion = {
-      nvim_cmp = true,
       min_chars = 2,
     },
 
-    -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
-    -- way then set 'mappings = {}'.
     mappings = {
       ["gf"] = {
         action = function()
@@ -52,21 +48,9 @@ return {
         end,
         opts = { noremap = false, expr = true, buffer = true },
       },
-      ["<leader>ch"] = {
-        action = function()
-          return require("obsidian").util.toggle_checkbox()
-        end,
-        opts = { buffer = true },
-      },
-      ["<cr>"] = {
-        action = function()
-          return require("obsidian").util.smart_action()
-        end,
-        opts = { buffer = true, expr = true },
-      },
     },
 
-    new_notes_location = "0. inbox/",
+    new_notes_location = "notes_subdir",
 
     ---@param title string|?
     ---@return string
@@ -123,13 +107,8 @@ return {
       return out
     end,
 
-    templates = {
-      folder = "templates",
-      date_format = "%Y-%m-%d",
-      time_format = "%H:%M",
-      substitutions = {},
-    },
-
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
+    -- URL it will be ignored but you can customize this behavior here.
     ---@param url string
     follow_url_func = function(url)
       vim.fn.jobstart({ "open", url }) -- Mac OS
@@ -140,68 +119,23 @@ return {
     open_app_foreground = false,
 
     picker = {
-      name = "telescope.nvim",
-      mappings = {
+      name = "fzf-lua",
+      note_mappings = {
         new = "<C-x>",
         insert_link = "<C-l>",
       },
+      tag_mappings = {
+        tag_note = "<C-x>",
+        insert_tag = "<C-l>",
+      },
     },
-
     sort_by = "modified",
     sort_reversed = true,
 
-    open_notes_in = "current",
-
-    callbacks = {
-      ---@param client obsidian.Client
-      post_setup = function(client) end,
-      ---@param client obsidian.Client
-      ---@param note obsidian.Note
-      enter_note = function(client, note) end,
-
-      ---@param client obsidian.Client
-      ---@param note obsidian.Note
-      leave_note = function(client, note) end,
-
-      ---@param client obsidian.Client
-      ---@param note obsidian.Note
-      pre_write_note = function(client, note) end,
-
-      ---@param client obsidian.Client
-      ---@param workspace obsidian.Workspace
-      post_set_workspace = function(client, workspace) end,
-    },
+    open_notes_in = "vsplit",
 
     ui = {
-      enable = true, -- set to false to disable all additional syntax features
-      update_debounce = 200, -- update delay after a text change (in milliseconds)
-      checkboxes = {
-        -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
-        [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-        ["x"] = { char = "", hl_group = "ObsidianDone" },
-        [">"] = { char = "", hl_group = "ObsidianRightArrow" },
-        ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
-        ["!"] = { char = "", hl_group = "ObsidianImportant" },
-      },
-      bullets = { char = "•", hl_group = "ObsidianBullet" },
-      external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
-      reference_text = { hl_group = "ObsidianRefText" },
-      highlight_text = { hl_group = "ObsidianHighlightText" },
-      tags = { hl_group = "ObsidianTag" },
-      block_ids = { hl_group = "ObsidianBlockID" },
-      hl_groups = {
-        ObsidianTodo = { bold = true, fg = "#f78c6c" },
-        ObsidianDone = { bold = true, fg = "#89ddff" },
-        ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
-        ObsidianTilde = { bold = true, fg = "#ff5370" },
-        ObsidianImportant = { bold = true, fg = "#d73128" },
-        ObsidianBullet = { bold = true, fg = "#89ddff" },
-        ObsidianRefText = { underline = true, fg = "#c792ea" },
-        ObsidianExtLinkIcon = { fg = "#c792ea" },
-        ObsidianTag = { italic = true, fg = "#89ddff" },
-        ObsidianBlockID = { italic = true, fg = "#89ddff" },
-        ObsidianHighlightText = { bg = "#75662e" },
-      },
+      enable = false,
     },
 
     attachments = {

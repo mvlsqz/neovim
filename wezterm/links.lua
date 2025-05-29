@@ -1,8 +1,5 @@
-local wezterm = require("wezterm")
-
 local M = {}
 
----@param config Config
 function M.setup(config)
   config.hyperlink_rules = {
     -- Linkify things that look like URLs and the host has a TLD name.

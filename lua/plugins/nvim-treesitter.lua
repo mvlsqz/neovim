@@ -16,6 +16,8 @@ return {
       "groovy",
       "java",
       "sql",
+      "jinja",
+      "jinja_inline",
     },
   },
 }

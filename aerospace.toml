@@ -9,7 +9,9 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['exec-and-forget /usr/local/bin/borders']
+after-startup-command = [
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -73,7 +75,6 @@ cmd-h = 'focus left'
 cmd-j = 'focus down'
 cmd-k = 'focus up'
 cmd-l = 'focus right'
-alt-shift-t = 'focus --window-id 29825'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -96,7 +97,7 @@ cmd-b = 'workspace B'
 cmd-e = 'workspace E'
 cmd-g = 'workspace G'
 cmd-i = 'workspace I'
-cmd-m = ['workspace M', 'layout accordion horizontal vertical']
+cmd-m = ['workspace M', 'layout accordion vertical']
 cmd-n = 'workspace N'
 cmd-o = 'workspace O'
 cmd-p = 'workspace P'
@@ -131,11 +132,8 @@ alt-shift-r = 'mode resize'
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-  'layout floating tiling',
-  'mode main',
-] # Toggle between floating and tiling layout
+r = ['flatten-workspace-tree', 'mode main']                # reset layout
+f = ['mode main']                                          # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
@@ -161,23 +159,23 @@ B = 'secondary'
 M = 'secondary'
 
 [[on-window-detected]]
-if.app-id = "com.github.wez.wezterm"
-run = 'move-node-to-workspace T'
-[[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace Y'
 [[on-window-detected]]
 if.app-id = "com.apple.Safari"
 run = 'move-node-to-workspace B'
 [[on-window-detected]]
+if.app-id = "app.zen-browser.zen"
+run = 'move-node-to-workspace B'
+[[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
-run = ['layout tiling', 'move-node-to-workspace M']
+run = ['move-node-to-workspace M']
 [[on-window-detected]]
 if.app-id = "com.microsoft.Outlook"
-run = ['layout tiling', 'move-node-to-workspace M']
+run = ['move-node-to-workspace M']
 [[on-window-detected]]
 if.app-id = "com.microsoft.teams2"
-run = ['layout tiling', 'move-node-to-workspace M']
+run = ['move-node-to-workspace M']
 [[on-window-detected]]
 if.app-id = "md.obsidian"
-run = ['layout tiling', 'move-node-to-workspace N']
+run = ['move-node-to-workspace N']

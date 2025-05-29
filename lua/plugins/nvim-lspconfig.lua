@@ -5,16 +5,17 @@ return {
     servers = {
       pyright = {},
       terraformls = {},
-      groovyls = {
-        settings = {
-          groovy = {
-            classpath = {
-              user_home .. "/.gradle/caches/modules-2/files-2.1",
-            },
-          },
-        },
-      },
       gopls = {},
+      ruff = {},
+      -- groovyls = {
+      --   settings = {
+      --     groovy = {
+      --       classpath = {
+      --         user_home .. "/.gradle/caches/modules-2/files-2.1",
+      --       },
+      --     },
+      --   },
+      -- },
     },
   },
 }

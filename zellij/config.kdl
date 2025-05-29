@@ -7,9 +7,8 @@ keybinds clear-defaults=true {
         name "Sunbeam"
         floating true
         width "20%"
-        height "20%"
+        height "40%"
       };
-      TogglePaneEmbedOrFloating;
       SwitchToMode "normal";
     }
   }
@@ -148,7 +147,6 @@ keybinds clear-defaults=true {
   }
   tmux {
     bind "[" { SwitchToMode "Scroll"; }
-    bind "Alt b" { Write 2; SwitchToMode "Normal"; }
     bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
     bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
     bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -171,8 +169,7 @@ keybinds clear-defaults=true {
   }
   shared_except "locked" {
     bind "Alt g" { SwitchToMode "Locked"; }
-    bind "Ctrl q" { Quit; }
-    bind "Alt f" { ToggleFloatingPanes; }
+    bind "Alt q" { Quit; }
     bind "Alt n" { NewPane; }
     bind "Alt i" { MoveTab "Left"; }
     bind "Alt o" { MoveTab "Right"; }
@@ -218,9 +215,6 @@ keybinds clear-defaults=true {
   shared_except "move" "locked" {
     bind "Alt m" { SwitchToMode "Move"; }
   }
-  shared_except "tmux" "locked" {
-    bind "Alt b" { SwitchToMode "Tmux"; }
-  }
 }
 plugins {
   tab-bar location="zellij:tab-bar"
@@ -260,3 +254,4 @@ pane_frames false
 scroll_buffer_size 100000
 simplified_ui true
 theme "latte"
+scrollback_editor "/opt/homebrew/bin/nvim"

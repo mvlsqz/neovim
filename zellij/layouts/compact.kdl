@@ -131,7 +131,7 @@ layout {
         tab_active_sync         "#[bg=bg,fg=fg,bold] {name}{sync_indicator}#[bg=bg,fg=bg,bold]"
 
         // separator between the tabs
-        tab_separator           "#[bg=bg] "
+        tab_separator           "#[bg=bg]"
 
         // indicators
         tab_sync_indicator       " "

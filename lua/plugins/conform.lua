@@ -4,19 +4,7 @@ return {
   opts = {
     formatters_by_ft = {
       ["groovy"] = { "npm-groovy-lint" },
-      ["yaml.ansible"] = { "ansiblelint" },
-    },
-    formatters = {
-      ansiblelint = {
-        command = "ansible-lint",
-        stdin = false,
-        args = { "--fix", "$FILENAME" },
-      },
+      ["yaml.ansible"] = { "ansible-lint" },
     },
   },
-  -- config = function()
-  --   require("conform").setup({
-
-  --   })
-  -- end,
 }
