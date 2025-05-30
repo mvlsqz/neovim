@@ -7,7 +7,6 @@ return {
     "saghen/blink.cmp",
     {
       "MeanderingProgrammer/render-markdown.nvim",
-      "lukas-reineke/headlines.nvim",
       dependencies = {
         "nvim-treesitter/nvim-treesitter",
       },
@@ -19,6 +18,10 @@ return {
       {
         name = "knowledge",
         path = vim.fn.expand("~/Documents/obsidian/knowledge"),
+      },
+      {
+        name = "work",
+        path = vim.fn.expand("~/Documents/obsidian/work"),
       },
     },
 

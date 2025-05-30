@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    version = "^1.0.0",
     opts = {
       servers = {
         jinja_lsp = {},
@@ -18,6 +19,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    version = "^1.0.0",
     opts = {
       ensure_installed = {
         "stylua",

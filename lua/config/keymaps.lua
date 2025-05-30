@@ -14,10 +14,14 @@ wk.add({
 
 wk.add({
   { "<leader>o", group = "Obsidian", icon = "󰙏 " },
+  { "<leader>of", "<cmd>ObsidianNewFromTemplate<cr>", desc = "New from template" },
+  { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New note" },
   { "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Search Notes" },
-  { "<leader>od", "<cmd>ObsidianDailies<cr>", desc = "Daily Notes" },
   { "<leader>ot", "<cmd>ObsidianTags<cr>", desc = "Tags" },
-  { "<leader>on", "<cmd>ObsidianNewFromTemplate<cr>", desc = "New from template" },
+  { "<leader>ot", "<cmd>ObsidianToday<cr>", desc = "Today Note" },
+  { "<leader>om", "<cmd>ObsidianTomorrow<cr>", desc = "Note for Tomorrow" },
+  { "<leader>ow", "<cmd>ObsidianWorkspace<cr>", desc = "Switch workspace" },
+  { "<leader>oy", "<cmd>ObsidianYesterday<cr>", desc = "Today Note" },
 }, {})
 
 vim.keymap.set("n", "<F1>", "<Esc>", { silent = true })
