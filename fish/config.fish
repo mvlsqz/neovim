@@ -15,6 +15,9 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -x PATH $HOME/local/bin $PATH
 source ~/.config/fish/secrets.fish
 
+# PyEnv tool
+pyenv init - fish | source
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda

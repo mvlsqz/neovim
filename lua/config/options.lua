@@ -16,8 +16,6 @@ local opt = setmetatable({}, {
   end,
 })
 
-vim.g.lazyvim_check_order = false
-
 opt.formatoptions = table.concat({
   "1",
   "q", -- continue comments with gq"

@@ -254,4 +254,4 @@ pane_frames false
 scroll_buffer_size 100000
 simplified_ui true
 theme "latte"
-scrollback_editor "/opt/homebrew/bin/nvim"
+scrollback_editor "/Users/mvelasquez/local/bin/nvim"
