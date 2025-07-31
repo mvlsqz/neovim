@@ -29,13 +29,15 @@ return {
 
     daily_notes = {
       folder = "05 - Daily",
-      date_format = "%Y-%m-%d",
-      alias_format = "%B %-d, %Y",
+      date_format = "%A-%B-%d-%Y",
+      alias_format = "%B-%-d-%Y",
       template = "daily_template.md",
     },
 
     templates = {
       folder = "04 - Templates",
+      date_format = "%A-%B-%d-%Y",
+      alias_format = "%B-%-d-%Y",
       note_template = "concept_template.md",
       daily_note_template = "daily_template.md",
     },

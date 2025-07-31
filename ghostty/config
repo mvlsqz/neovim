@@ -1,10 +1,11 @@
+gtk-single-instance = true
 font-family = Monaspace Argon Frozen
 font-style = Light
 font-family-bold = Monaspace Krypton Var
 font-style-bold = ExtraBold
 font-family-italic = Monaspace Radon
 font-style-italic = Wide SemiBold Italic
-font-size = 20
+font-size = 25
 font-feature = calt
 font-feature = liga
 font-feature = dlig
