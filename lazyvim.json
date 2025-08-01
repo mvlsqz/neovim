@@ -1,0 +1,21 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.ai.copilot-chat",
+    "lazyvim.plugins.extras.coding.luasnip",
+    "lazyvim.plugins.extras.editor.inc-rename",
+    "lazyvim.plugins.extras.lang.ansible",
+    "lazyvim.plugins.extras.lang.git",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.lsp.neoconf",
+    "lazyvim.plugins.extras.lsp.none-ls",
+    "lazyvim.plugins.extras.ui.indent-blankline",
+    "lazyvim.plugins.extras.ui.mini-indentscope",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
+  ],
+  "install_version": 7,
+  "news": {
+    "NEWS.md": "10960"
+  },
+  "version": 8
+}
