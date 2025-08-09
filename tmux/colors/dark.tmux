@@ -1,2 +1,2 @@
-BG=#374145
-FG=#e8e1bf
+set -g @background "#374145"
+set -g @foreground "#e8e1bf"
