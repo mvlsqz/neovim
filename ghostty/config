@@ -1,11 +1,10 @@
-gtk-single-instance = true
 font-family = Monaspace Argon Frozen
 font-style = Light
 font-family-bold = Monaspace Krypton Var
 font-style-bold = ExtraBold
 font-family-italic = Monaspace Radon
 font-style-italic = Wide SemiBold Italic
-font-size = 25
+font-size = 23
 font-feature = calt
 font-feature = liga
 font-feature = dlig
@@ -20,11 +19,16 @@ font-feature = ss08
 
 macos-titlebar-style = hidden
 
-window-padding-balance = true
-mouse-scroll-multiplier = 0.5
+mouse-scroll-multiplier = 2
 window-decoration = false
 window-padding-x = 8
 window-padding-y = 8
+window-padding-balance = true
+window-padding-color = extend
+font-synthetic-style = true
+cursor-style = block
+cursor-style-blink = true
+shell-integration-features = no-cursor,sudo
 macos-window-shadow = false
 keybind = alt+left=unbind
 keybind = cmd+c=unbind

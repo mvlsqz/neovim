@@ -1,5 +1,4 @@
 if status is-interactive
-    set fish_tmux_autostart true
 end
 
 alias vim=nvim
@@ -23,3 +22,12 @@ end
 # <<< conda initialize <<<
 
 nvm use latest >/dev/null 2>&1
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/mvelasquez/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+status is-interactive; and begin
+    set fish_tmux_autostart true
+    set fish_tmux_autoname_session true
+end
