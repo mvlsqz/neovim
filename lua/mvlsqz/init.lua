@@ -12,4 +12,13 @@ M.colorscheme_flavour = function()
 
   return flavour
 end
+
+M.daytime = function()
+  local hr = tonumber(os.date("%H", os.time()))
+  if hr > 7 and hr < 18 then
+    return "day"
+  else
+    return "storm"
+  end
+end
 return M

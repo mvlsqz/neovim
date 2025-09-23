@@ -1,2 +1,2 @@
-set -g @foreground "#374145"
-set -g @background "#e8e2c8"
+set -g @foreground "#3760bf"
+set -g @background "#e1e2e7"

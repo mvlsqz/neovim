@@ -7,15 +7,6 @@ return {
       terraformls = {},
       gopls = {},
       ruff = {},
-      -- groovyls = {
-      --   settings = {
-      --     groovy = {
-      --       classpath = {
-      --         user_home .. "/.gradle/caches/modules-2/files-2.1",
-      --       },
-      --     },
-      --   },
-      -- },
     },
   },
 }

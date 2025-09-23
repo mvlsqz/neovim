@@ -31,7 +31,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     opts = {
       use_as_default_explorer = true,
       mappings = {

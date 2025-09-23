@@ -1,6 +1,18 @@
 local scheme_config = require("mvlsqz")
 local flavour = scheme_config.colorscheme_flavour()
+local daytime = scheme_config.daytime()
+
+if daytime ~= "day" then
+  vim.opt.bg = "dark"
+end
+
 return {
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = daytime,
+    },
+  },
   {
     "catppuccin/nvim",
     lazy = true,
@@ -383,46 +395,9 @@ return {
     },
   },
   {
-    "folke/tokyonight.nvim",
+    "LazyVim/LazyVim",
     opts = {
-      style = "night",
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-        functions = { bold = true },
-        methods = { bold = true },
-      },
-      on_highlights = function(hl, c)
-        local prompt = "#2d3149"
-        hl.TelescopeNormal = {
-          bg = c.bg_dark,
-          fg = c.fg_dark,
-        }
-        hl.TelescopeBorder = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopePromptNormal = {
-          bg = prompt,
-        }
-        hl.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePromptTitle = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePreviewTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopeResultsTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-      end,
+      colorscheme = "tokyonight",
     },
   },
 }

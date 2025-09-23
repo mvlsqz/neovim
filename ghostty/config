@@ -36,7 +36,7 @@ keybind = alt+right=unbind
 keybind = alt+b=unbind
 keybind = alt+f=unbind
 macos-option-as-alt = true
-theme = dark:mocha,light:latte
+theme = dark:moon,light:day
 background-opacity = 0.98
 adjust-cell-width = 0
 adjust-cell-height = 25%
